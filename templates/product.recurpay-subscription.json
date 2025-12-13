@@ -1,0 +1,656 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_WpBLbQ": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div id=\"hero-mobile\">\n<div class=\"product-info__text\">\n            <div class=\"prose\"><h1 style=\"font-size: 2.6rem!important; line-height:1!important;\">It's Caviar <br><span style=\"font-style:italic;\">re-imagined</span></h1></div>\n          </div>\n\n\n<div style=\"margin: 1rem 0 10px 0;\" class=\"product-info__text\">\n            <div class=\"prose\"><p style=\"font-size: 1rem;\">\nLooks like caviar. Feels like caviar. <br><span style=\"font-weight: 500; font-style: italic;\">Tastes better </span> than caviar.</p></div>\n          </div>\n\n\n\n<img class=\"hero-stars\" src=\"https://cdn.shopify.com/s/files/1/0742/2849/8706/files/stars_532351d2-f3e9-41b8-9996-41babc17e845.png\" />\n\n<a href=\"#reviews\" class=\"hero-stars-text\">\n5 stars\n</a>\n<br>\n<a href=\"#reviews\" class=\"hero-stars-text\" style=\"clear: both; margin-top: -5px;\">\n<span>Read the reviews</span>\n</a>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "liquid_qqxYTY": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"desktop-only\">\n<div class=\"product-info__text\">\n            <div class=\"prose\"><h1>It's Caviar, reimagined</h1></div>\n          </div>\n\n\n<div style=\"margin: 1rem 0;\" class=\"product-info__text\">\n            <div class=\"prose\" id=\"intro-expand\">\n\n<p>Zeroe Caviar is a plant-based fish egg alternative that boasts the texture of traditional caviar with superior flavor, and it's 100% cruelty-free. It's made with ... <span id=\"read-more\">Read more.</span></p>\n\n<p class=\"expanded-text\"> seaweed grown organically off the coast of France. The seaweed is washed and suspended in clean water, then extracted and transformed into round spheres. The crisp, juicy flavor is achieved using all natural ingredients including cayenne, black pepper, turmeric, laurel, leek, dill and tarragon sourced from Norway, Iceland, Greenland, Scotland & Spain.</p>\n</div>\n          </div>\n\n\n<img class=\"hero-stars\" src=\"https://cdn.shopify.com/s/files/1/0742/2849/8706/files/stars_532351d2-f3e9-41b8-9996-41babc17e845.png\" />\n\n<a href=\"#reviews\" class=\"hero-stars-text\">\n5 stars - <span style=\"font-weight: 500;\">Read reviews</span>\n</a>\n\n\n<style>\n  /* Initially hide the expanded text */\n  #intro-expand .expanded-text {\n    display: none;\n  }\n\n  /* Make the expanded text visible when a \"visible\" class is added to the parent .prose */\n  #intro-expand.visible .expanded-text {\n    display: block;\n  }\n\n  /* Style the read more/read less button for better UX */\n  #read-more {\n    cursor: pointer;\nfont-weight: 500;\n    text-decoration: underline;\n  }\n</style>\n\n\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    const readMoreButton = document.getElementById('read-more');\n    const proseElement = document.getElementById('intro-expand');\n\n    if (readMoreButton) {\n      readMoreButton.addEventListener('click', function () {\n        proseElement.classList.toggle('visible'); // Toggle 'visible' class\n\n        // Toggle the text content of the \"read more\" button\n        if (proseElement.classList.contains('visible')) {\n          readMoreButton.textContent = 'Read less.';\n        } else {\n          readMoreButton.textContent = 'Read more.';\n        }\n      });\n    }\n  });\n</script>\n</div>"
+          }
+        },
+        "image_AP8Gbn": {
+          "type": "image",
+          "settings": {
+            "alignment": "end",
+            "max_width": 150
+          }
+        },
+        "liquid_GUF7eU": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div id=\"intro-expand-2\">\n<p style=\"font-weight: 400; font-size: 1.3rem; margin-bottom: .3rem; margin-top: 1.5rem;\">\nZeroe, plant-based caviar.\n</p>\n<p style=\"margin-bottom: 20px; line-height: 1.6; font-size: 14px!important;\" class=\"mobile-only\">\nZeroe Caviar is 100% plant-based and has a crisp, juicy flavor which is enhanced using all natural ingredients including cayenne, black pepper, turmeric, laurel, leek, dill and tarragon.\nMade from seaweed grown off the coast of France ... <span id=\"read-more-2\">Read more.</span></p>\n\n<p class=\"expanded-text-2\" style=\"line-height: 1.6; font-size: 14px!important;\"> \nthe seaweed is washed and suspended in clean water, then extracted and transformed into round spheres.<br><br></p> \n\n</div>\n\n\n<style>\n  /* Initially hide the expanded text */\n  #intro-expand-2 .expanded-text-2 {\n    display: none;\n  }\n\n  /* Make the expanded text visible when a \"visible\" class is added to the parent .prose */\n  #intro-expand-2.visible .expanded-text-2 {\n    display: block;\n  }\n\n  /* Style the read more/read less button for better UX */\n  #read-more-2 {\n    cursor: pointer;\nfont-weight: 500;\n    text-decoration: underline;\n  }\n</style>\n\n\n\n\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    const readMoreButton = document.getElementById('read-more-2');\n    const proseElement = document.getElementById('intro-expand-2');\n\n    if (readMoreButton) {\n      readMoreButton.addEventListener('click', function () {\n        proseElement.classList.toggle('visible'); // Toggle 'visible' class\n\n        // Toggle the text content of the \"read more\" button\n        if (proseElement.classList.contains('visible')) {\n          readMoreButton.textContent = 'Read less.';\n        } else {\n          readMoreButton.textContent = 'Read more.';\n        }\n      });\n    }\n  });\n</script>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "subscription_price_494Eif": {
+          "type": "subscription-price",
+          "settings": {}
+        },
+        "liquid_tJgPhr": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<p class=\"small\" style=\"margin-bottom: 7px;\">\n50g jar. Includes Mother Of Pearl Spoon.<br>\n<span style=\"font-weight: 600;\">FREE shipping</span> on two or more jars\n</p>\n\n\n\n\n<style>\n  #discount1, #discount2 {\n    position: relative;\n    display: inline-block;\n    cursor: pointer;\n  }\n\n  #discount1:hover .tooltip, #discount2:hover .tooltip {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  .tooltip {\n    visibility: hidden;\n    opacity: 0;\n    width: max-content;\nbackground-color: #333;\ncolor: #fff;\ntext-align: center;\npadding: 8px 14px;\nborder-radius: 6px;\nposition: absolute;\nbottom: 125%;\nleft: 50%;\ntransform: translateX(-50%);\nz-index: 1000;\ntransition: opacity 0.3s ease;\nfont-size: 14px;\nwhite-space: nowrap;\n  }\n\n  .tooltip::after {\n    content: \"\";\n    position: absolute;\n    top: 100%; /* Arrow pointing down */\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: #333 transparent transparent transparent;\n  }\n</style>"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "upsell_koala_bundles_deals_block_WRtRgJ": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/deals-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "liquid_gxatdg": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"product-info__text\">\n    <div class=\"recurpay_heading\"><p>Choose purchase type</p></div>\n</div>"
+          }
+        },
+        "recurpay_subscriptions_app_recurpay_app_block_widget_BKX9dz": {
+          "type": "shopify://apps/recurpay-subscriptions-app/blocks/recurpay-app-block-widget/c600a513-dad8-4030-8697-de47c18881f2",
+          "settings": {
+            "multiply_price_with_quantity": true,
+            "show_price_in_frequency_dropdown": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "#11483d",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "#11483d",
+            "payment_button_text_color": "#ffffff"
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "liquid_qqxYTY",
+        "image_AP8Gbn",
+        "liquid_GUF7eU",
+        "price",
+        "subscription_price_494Eif",
+        "liquid_tJgPhr",
+        "rating",
+        "separator",
+        "variant_picker",
+        "quantity_selector",
+        "upsell_koala_bundles_deals_block_WRtRgJ",
+        "liquid_gxatdg",
+        "recurpay_subscriptions_app_recurpay_app_block_widget_BKX9dz",
+        "buy_buttons",
+        "payment_terms"
+      ],
+      "custom_css": [
+        ".product-gallery__thumbnail-list {grid-auto-columns: 60px;}",
+        ".product-gallery__thumbnail-list button img {height: 60px;}",
+        ".section-blends {padding-block-end: 1rem !important;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 65,
+        "desktop_media_layout": "grid_highlight",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "custom_html_hJD38M": {
+      "type": "custom-html",
+      "custom_css": [
+        ".section-full {margin-top: 2rem; padding-block-end: 1rem !important;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "html": "<h3 class=\"h2\">This is <span style=\"font-style: italic;\">not</span> your traditional caviar</h3> \n<p style=\"margin-top: 10px;\">Plant-based caviar has changed the game. Turn heads at your next gathering with Zeroe.</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "1737077220f37b3eca": {
+      "type": "apps",
+      "blocks": {
+        "reelup_shoppable_videos_reels_reelup_playlist_AnDUp8": {
+          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup_playlist/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {
+            "playlist_id": "rl_pl_12598"
+          }
+        }
+      },
+      "block_order": [
+        "reelup_shoppable_videos_reels_reelup_playlist_AnDUp8"
+      ],
+      "custom_css": [
+        "@media (max-width: 999px) {.section-full {padding-left: 16px !important; padding-block-end: 0; }}",
+        "@media (min-width: 1000px) {.section-full {padding-block-start: 0 !important; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
+      }
+    },
+    "custom_html_LTPrxX": {
+      "type": "custom-html",
+      "custom_css": [
+        ".section-full {margin-top: 2rem; padding-block-end: 1rem !important;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "html": "<h3 class=\"h2\">Spread It, Scoop It, Love It!</h3> \n<p style=\"margin-top: 10px;\">From foie gras canapés to crispy fried chicken, Zeroe plant-based caviar elevates every bite with its rich, indulgent flavor.</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "1737178594f1c25b52": {
+      "type": "apps",
+      "blocks": {
+        "reelup_shoppable_videos_reels_reelup_playlist_wxyL66": {
+          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup_playlist/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {
+            "playlist_id": "rl_pl_12627"
+          }
+        }
+      },
+      "block_order": [
+        "reelup_shoppable_videos_reels_reelup_playlist_wxyL66"
+      ],
+      "custom_css": [
+        "@media (max-width: 999px) {.section-full {padding-left: 16px !important; padding-block-end: 0; }}",
+        "@media (min-width: 1000px) {.section-full {padding-block-start: 0 !important; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
+      }
+    },
+    "custom_html_VGACUk": {
+      "type": "custom-html",
+      "disabled": true,
+      "custom_css": [
+        ".section-full {padding-block-end: 2rem;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "html": "<hr style=\"border-top: 1px solid #ddd; padding-bottom: 0;\">",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_html_bUQiCX": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "html": "<h3 class=\"h2\">Plant-based and cruelty free</h3> \n<p style=\"margin-top: 10px;\">Zeroe is made using seaweed grown  organically of the coast of France.<br>\n<a href=\"#\" style=\"text-decoration: underline;\">Read about the process.</a> </p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "text_with_icons_DzLyp9": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_jzejxt": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-leaf",
+            "custom_icon": "shopify://shop_images/icon-vegan.png",
+            "mobile_icon_width": 60,
+            "icon_width": 80,
+            "icon_background_type": "none",
+            "icon_background": "#eaf2ed",
+            "icon_color": "",
+            "title": "Plant-based and cruelty free",
+            "content": "<p>Zeroe is made using seaweed grown  organically of the coast of France.</p>"
+          }
+        },
+        "item_gmkWjj": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/icon-gluten.png",
+            "mobile_icon_width": 60,
+            "icon_width": 80,
+            "icon_background_type": "none",
+            "icon_background": "#eaf2ed",
+            "icon_color": "",
+            "title": "Gluten-free",
+            "content": "<p>Zero Caviar is 100% gluten-free.</p>"
+          }
+        },
+        "item_bKX6Wx": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/New-Kosher-Symbol.jpg",
+            "mobile_icon_width": 60,
+            "icon_width": 80,
+            "icon_background_type": "none",
+            "icon_background": "#eaf2ed",
+            "icon_color": "",
+            "title": "Kosher Certified",
+            "content": "<p>Zeroe Caviar is Kosher Certified</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_jzejxt",
+        "item_gmkWjj",
+        "item_bKX6Wx"
+      ],
+      "custom_css": [
+        ".section-full {padding-block-start: 1rem; padding-block-end: 2rem !important;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "",
+        "heading_tag": "h3",
+        "text_alignment": "center",
+        "icon_spacing": "small",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_fkJnhW": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".section-full {padding-block-start: 0;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<a href=\"#faq\" type=\"submit\" class=\" button button--xl\" style=\"display: block; float: none; text-align: center; margin: 0 auto; max-width: 300px; background: transparent; border: 2px solid #11483d; color: #11483d;\">How is it made?</a>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "video_eyfUdt": {
+      "type": "video",
+      "blocks": {
+        "play_JwYzYA": {
+          "type": "play",
+          "settings": {}
+        },
+        "heading_3x7czq": {
+          "type": "heading",
+          "settings": {
+            "text": "A favourite with Michelin-starred chefs",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "play_JwYzYA",
+        "heading_3x7czq"
+      ],
+      "custom_css": [
+        ".section-full {margin: 0 auto; background: #fff !important;}",
+        ".h1 {font-size: 2.3rem;}",
+        "@media (max-width: 999px) {.section-full {padding-block-start: 0rem; padding-block-end: 0; } video-media {height: 280px; } .h1 {font-size: 1.8rem; line-height: 1.1; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "autoplay": true,
+        "video_size": "sm",
+        "video": "shopify://files/videos/Veganizer - Chelo x Feral FINAL.MOV",
+        "external_video_url": "",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "logo_list_mkmWPt": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_Pc7R6h": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo-5.png",
+            "logo_width": 170,
+            "link": ""
+          }
+        },
+        "logo_cJe7VP": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo-3.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_8kr7EC": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo-4.png",
+            "logo_width": 140,
+            "link": ""
+          }
+        },
+        "logo_7BWLdd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo-2.png",
+            "logo_width": 140,
+            "link": ""
+          }
+        },
+        "logo_ftTyej": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo-1.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Pc7R6h",
+        "logo_cJe7VP",
+        "logo_8kr7EC",
+        "logo_7BWLdd",
+        "logo_ftTyej"
+      ],
+      "custom_css": [
+        ".section-blends {padding-block-start: 0 !important;}",
+        ".section-stack {gap: 0 !important;}",
+        "h2 {max-width: 1000px; margin: 0 auto;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": false,
+        "title": "",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 6,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "custom_liquid_pnUa9c": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".section-full {padding-block-start: 0; padding-block-end: 0 !important;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div id=\"faq\"></div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "accordion_content_brNbY3": {
+      "type": "accordion-content",
+      "blocks": {
+        "item_kPhVVC": {
+          "type": "item",
+          "settings": {
+            "title": "Ingredients",
+            "content": "<p>Zeroe Caviar is 100% gluten free, vegan friendly, and Kosher certified.</p><ul><li>Seaweed extract</li><li>Water</li><li>Salt</li><li>Spices: extracts of cayenne pepper</li><li>Turmeric</li><li>Laurel</li><li>Leek</li><li>Aroma: Dill</li><li>Tarragon</li><li>Citric acid (as an acidity regulator)</li><li>Tragacanth gum</li><li>Potassium sorbate (to maintain freshness)</li><li>Natrium benzoate (to prevent spoilage)</li><li>Color: Caramelized vegetables</li></ul>"
+          }
+        },
+        "item_b64Eik": {
+          "type": "item",
+          "settings": {
+            "title": "What does it taste like?",
+            "content": "<p>Zeroe Caviar has a crisp, juicy flavor which is enhanced using all natural ingredients including cayenne, black pepper, turmeric, laurel, leek, dill and tarragon sourced from Norway, Iceland, Greenland, Scotland & Spain.</p>"
+          }
+        },
+        "item_7Lf8xg": {
+          "type": "item",
+          "settings": {
+            "title": "How is it made?",
+            "content": "<p>Zeroe Caviar is manufactured in Denmark using seaweed grown organically off the coast of France, and is completely Vegan. </p><p>The seaweed is washed and suspended in clean water, then extracted and transformed into round spheres. </p><p>The crisp, juicy flavor is achieved using all natural ingredients including cayenne, black pepper, turmeric, laurel, leek, dill and tarragon sourced from Norway, Iceland, Greenland, Scotland & Spain.</p>"
+          }
+        },
+        "item_giK6YT": {
+          "type": "item",
+          "settings": {
+            "title": "Does it ‘feel’ like real caviar?",
+            "content": "<p>Zeroe's plant-based caviar is crafted from seaweed, forming delicate spheres that mimic the texture of traditional caviar. </p>"
+          }
+        },
+        "item_npb4DY": {
+          "type": "item",
+          "settings": {
+            "title": "What does it pair with?",
+            "content": "<p>Plant-based caviar is wonderfully versatile, pairing beautifully with a wide range of dishes. </p><p>Enjoy it on blinis with vegan crème fraîche, as a topping for sushi, avocado toast, or salads, or as a garnish for pasta and canapés. </p><p>Its delicate texture and briny flavor elevate everyday dishes while complementing sparkling wine, champagne, or dry whites—perfect for any occasion.</p>"
+          }
+        },
+        "item_WhKTE3": {
+          "type": "item",
+          "settings": {
+            "title": "Is it ethically sourced?",
+            "content": "<p>Our caviar is entirely plant-based, meaning no fish or animal products are used in its production. </p><p>This approach significantly reduces our environmental impact, as traditional caviar farming is known for its overfishing and habitat destruction. </p><p>We responsibly source our seaweed-based caviar to ensure that we minimize our environmental impact. This means you can enjoy our luxurious caviar with peace of mind, knowing that you are making a responsible choice for the planet.</p>"
+          }
+        },
+        "item_KgnfL3": {
+          "type": "item",
+          "settings": {
+            "title": "Why is this better than fish caviar?",
+            "content": "<p>Plant-based caviar mimics the luxury of traditional caviar without harming marine life or ecosystems, offering a sustainable, ethical, and guilt-free alternative. </p><p>Unlike traditional caviar, which often involves overfishing, habitat destruction, and the painful harvesting of roe from endangered sturgeon, plant-based options protect marine biodiversity and promote conservation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_kPhVVC",
+        "item_b64Eik",
+        "item_7Lf8xg",
+        "item_giK6YT",
+        "item_npb4DY",
+        "item_WhKTE3",
+        "item_KgnfL3"
+      ],
+      "custom_css": [
+        ".section-boxed {margin-top: 0rem;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "subheading": "",
+        "title": "Culinary bliss, crafted from sustainably sourced seaweed.",
+        "content": "<p>Our caviar is entirely plant-based, meaning no fish or animal products are used in its production. This approach significantly reduces our environmental impact, as traditional caviar farming is known for its overfishing and habitat destruction. </p>",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "#f9f5f7",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "#f7e1e7",
+        "button_text_color": "",
+        "accordion_background": "#f9f5f7",
+        "accordion_text_color": ""
+      }
+    },
+    "image_with_text_overlay_hUh7Tp": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_eRkXbh": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Made with love for our oceans",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_WQBVQU": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h4>Choose Zeroe and help to conserve marine life</h4><p>Zeroe Caviar not only supports marine conservation but also takes a stand against the cruelty of traditional caviar production. Enjoy a delicious way to protect sturgeon and preserve aquatic ecosystems.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eRkXbh",
+        "richtext_WQBVQU"
+      ],
+      "custom_css": [
+        ".h1 {font-size: 3rem;}",
+        ".content-over-media {max-width: 1000px; margin: 0 auto;}",
+        "@media (max-width: 999px) {.h1 {font-size: 2rem; line-height: 1.1; }}"
+      ],
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": true,
+        "image_size": "auto",
+        "image": "shopify://shop_images/ocean.jpg",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "custom_html_qL7wMx": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "html": "<div class=\"section-stack\" id=\"ingredients\">\n      <div class=\"prose \">\n<h2 class=\"h2\">Ingredients</h2>\n<p>Zeroe Caviar is 100% gluten free, vegan friendly, and Kosher certified.</p>\n<br>\n<ul class=\"ul-lines\">\n<li>Seaweed extract</li>\n<li>Water</li>\n<li>Salt</li>\n<li>Spices: extracts of cayenne pepper</li>\n<li>Turmeric</li>\n<li>Laurel</li>\n<li>Leek</li>\n<li>Aroma: Dill</li>\n<li>Tarragon</li>\n<li>Citric acid (as an acidity regulator)</li>\n<li>Tragacanth gum</li>\n<li>Potassium sorbate (to maintain freshness)</li>\n<li>Natrium benzoate (to prevent spoilage)</li>\n<li>Color: Caramelized vegetables</li>\n</ul>\n</div>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_JxV6Nc": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div id=\"reviews\" style=\"max-width: 1000px; margin: 0 auto;\">\n\n<div class=\"prose\" style=\"margin-bottom: 2rem;\">\n<h2 class=\"h2\" style=\"text-align:center;\">See why our customers love Zeroe Caviar</h2>\n\n</div>\n\n<script type=\"text/javascript\" src=\"https://cdn.grw.reputon.com/assets/widget.js?shop=zeroe-9068.myshopify.com\"  defer></script>\n<div class=\"reputon-google-reviews-widget\"\n                 data-content-index=\"1\"\n                 data-theme=\"light\"\n                 data-type=\"standard\"\n                 data-show-review-photos=\"true\"\n                 data-write-review=\"false\"></div>\n</div></div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_WpBLbQ",
+    "main",
+    "custom_html_hJD38M",
+    "1737077220f37b3eca",
+    "custom_html_LTPrxX",
+    "1737178594f1c25b52",
+    "custom_html_VGACUk",
+    "custom_html_bUQiCX",
+    "text_with_icons_DzLyp9",
+    "custom_liquid_fkJnhW",
+    "video_eyfUdt",
+    "logo_list_mkmWPt",
+    "custom_liquid_pnUa9c",
+    "accordion_content_brNbY3",
+    "image_with_text_overlay_hUh7Tp",
+    "custom_html_qL7wMx",
+    "custom_liquid_JxV6Nc"
+  ]
+}

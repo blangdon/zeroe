@@ -1,0 +1,1001 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "section_vertical_spacing": "medium",
+    "button_border_radius": 60,
+    "input_border_radius": 8,
+    "block_border_radius": 24,
+    "block_shadow_opacity": 10,
+    "block_shadow_vertical_offset": 18,
+    "icon_stroke_width": 1.7,
+    "background": "#ffffff",
+    "text_color": "#000000",
+    "header_background": "#e1d0d6",
+    "header_text_color": "#000000",
+    "footer_background": "#11483d",
+    "footer_text_color": "#ffffff",
+    "dialog_background": "#e1d0d6",
+    "primary_button_background": "#11483d",
+    "primary_button_text_color": "#ffffff",
+    "secondary_button_background": "#e1d0d6",
+    "secondary_button_text_color": "#000000",
+    "product_card_text_color": "#1a1a1a",
+    "product_primary_badge_background": "#803cee",
+    "heading_font": "americana_n8",
+    "heading_font_size": "large",
+    "heading_letter_spacing": -2,
+    "text_font": "questrial_n4",
+    "text_font_size_mobile": 14,
+    "currency_code_enabled": false,
+    "show_page_transition": true,
+    "reduce_drawer_animation": false,
+    "heading_apparition": "split_fade",
+    "show_discount": true,
+    "product_color_display": "swatch",
+    "product_info_alignment": "start",
+    "cart_empty_button_link": "shopify://products/plant-based-caviar-p3",
+    "cart_show_free_shipping_threshold": false,
+    "favicon": "shopify://shop_images/161127318_468032171012296_3846836157865217639_n-removebg-preview.png",
+    "checkout_logo_image": "shopify://shop_images/161127318_468032171012296_3846836157865217639_n-removebg-preview.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_accent_color": "#11483d",
+    "checkout_button_color": "#11483d",
+    "checkout_error_color": "#ff0000",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "message": {
+            "type": "message",
+            "disabled": true,
+            "settings": {
+              "text": "FREE JAR WITH PURCHASE FOR BLACK FRIDAY! 🎁",
+              "url": "https://zeroecaviar.com/products/plant-based-caviar-p3"
+            }
+          },
+          "b7093c4d-7b90-49be-a7f7-95abd99bb825": {
+            "type": "message",
+            "disabled": true,
+            "settings": {
+              "text": "Loved by Tens of Thousands of People",
+              "url": ""
+            }
+          },
+          "f5e06027-20cf-4c13-8194-7895984d025e": {
+            "type": "message",
+            "disabled": true,
+            "settings": {
+              "text": "Trusted & Endorsed by Celebrities",
+              "url": ""
+            }
+          },
+          "ceccea44-beff-4d8c-9d0b-535628258ea2": {
+            "type": "message",
+            "disabled": true,
+            "settings": {
+              "text": "Use code \"SAVE50\" to get an additional 50% off on orders over $100",
+              "url": ""
+            }
+          },
+          "message_NgaqhN": {
+            "type": "message",
+            "disabled": true,
+            "settings": {
+              "text": "Black Friday is on!🔥  Get 51% off 4 or More Jars!",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "message",
+          "b7093c4d-7b90-49be-a7f7-95abd99bb825",
+          "f5e06027-20cf-4c13-8194-7895984d025e",
+          "ceccea44-beff-4d8c-9d0b-535628258ea2",
+          "message_NgaqhN"
+        ],
+        "custom_css": [],
+        "settings": {
+          "enable_sticky": true,
+          "text_size": "text-base",
+          "navigation_mode": "arrows",
+          "scrolling_speed": 10,
+          "background": "#11483d",
+          "background_gradient": "",
+          "text_color": "#ffffff"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "mega_menu_CCRJbT": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "",
+              "layout": "horizontal",
+              "submenu_style": "bold_heading",
+              "image_heading_1": "",
+              "image_link_1": "",
+              "image_text_color_1": "#ffffff",
+              "image_heading_2": "",
+              "image_link_2": "",
+              "image_text_color_2": "#ffffff",
+              "image_heading_3": "",
+              "image_link_3": "",
+              "image_text_color_3": "#ffffff",
+              "product": "",
+              "product_card_background": "",
+              "product_card_text_color": "",
+              "promo_content_layout": "grid",
+              "stretch_promo": false,
+              "drawer_link_image": "hide"
+            }
+          }
+        },
+        "block_order": [
+          "mega_menu_CCRJbT"
+        ],
+        "custom_css": [],
+        "settings": {
+          "enable_sticky": false,
+          "hide_on_scroll": false,
+          "logo": "shopify://shop_images/Zeroe_Caviar_logo_-_white_36d419b5-fa5f-448f-91cb-8c67b8c4e37d.png",
+          "logo_max_width": 110,
+          "logo_mobile_max_width": 90,
+          "menu": "main-menu",
+          "sidebar_menu": "",
+          "secondary_menu": "",
+          "menu_open_trigger": "click",
+          "opening_from": "bottom",
+          "layout": "logo_center_navigation_inline",
+          "show_social_media": true,
+          "show_locale_selector": false,
+          "show_country_selector": true,
+          "show_country_flag": true,
+          "show_country_name": true,
+          "transparent_header_text_color": "#000000",
+          "reduce_padding": true,
+          "background_opacity": 20,
+          "background_blur_radius": 0
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "show_cart_note": false,
+          "show_shipping_text": false,
+          "show_checkout_button": true,
+          "recommendations_title": "Trending this month",
+          "products": [],
+          "product_card_background": "#ffffff",
+          "product_card_text_color": ""
+        }
+      },
+      "search-drawer": {
+        "type": "search-drawer",
+        "settings": {
+          "full_width": true,
+          "show_article_category": true,
+          "search_products": true,
+          "search_blog_posts": true,
+          "search_pages": true,
+          "search_collections": true,
+          "search_unavailable_products": "last",
+          "search_menu": "",
+          "search_menu_show_title": true
+        }
+      },
+      "static-text-with-icons": {
+        "type": "static-text-with-icons",
+        "blocks": {
+          "customer-support": {
+            "type": "item",
+            "disabled": true,
+            "settings": {
+              "icon": "picto-customer-support",
+              "mobile_icon_width": 24,
+              "icon_width": 24,
+              "icon_background_type": "none",
+              "icon_background": "",
+              "icon_color": "",
+              "title": "Customer service",
+              "content": "<p>Tell your customers how they can reach you.</p>"
+            }
+          },
+          "discount": {
+            "type": "item",
+            "disabled": true,
+            "settings": {
+              "icon": "picto-coupon",
+              "mobile_icon_width": 24,
+              "icon_width": 24,
+              "icon_background_type": "none",
+              "icon_background": "",
+              "icon_color": "",
+              "title": "Refer a friend",
+              "content": "<p>Tell your customers about your promotional offers.</p>"
+            }
+          },
+          "payment": {
+            "type": "item",
+            "disabled": true,
+            "settings": {
+              "icon": "picto-recycle",
+              "mobile_icon_width": 24,
+              "icon_width": 24,
+              "icon_background_type": "none",
+              "icon_background": "",
+              "icon_color": "",
+              "title": "Secure payment",
+              "content": "<p>Tel your customers about your payment methods.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "customer-support",
+          "discount",
+          "payment"
+        ],
+        "settings": {
+          "show_section": true,
+          "full_width": true,
+          "heading_tag": "h6",
+          "text_alignment": "center",
+          "icon_spacing": "small",
+          "background": "",
+          "background_gradient": "",
+          "text_color": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "image": "shopify://shop_images/Zeroe_Caviar_logo_-_white.png",
+              "image_width": 150,
+              "heading_size": "h6",
+              "title": "Get Exclusive Promotion & News, Right into Your Inbox",
+              "content": ""
+            }
+          },
+          "links": {
+            "type": "links",
+            "settings": {
+              "menu": "main-menu",
+              "show_menu_title": true
+            }
+          },
+          "602c5ba2-3a7b-44b1-aa04-c9991fa749af": {
+            "type": "links",
+            "settings": {
+              "menu": "footer",
+              "show_menu_title": true
+            }
+          },
+          "text": {
+            "type": "text",
+            "settings": {
+              "title": "About",
+              "content": "<p>Our mission is to make a positive impact by offering responsibly sourced, plant-based caviar that elevates your dining experience while supporting marine conservation efforts. With our commitment to quality, taste, and sustainability, Zeroe is your go-to brand for guilt-free indulgence that aligns with your values</p>"
+            }
+          }
+        },
+        "block_order": [
+          "newsletter",
+          "links",
+          "602c5ba2-3a7b-44b1-aa04-c9991fa749af",
+          "text"
+        ],
+        "custom_css": [
+          "h1 {color: white;}"
+        ],
+        "settings": {
+          "show_social_media": true,
+          "show_payment_icons": true,
+          "show_country_selector": true,
+          "show_country_flag": true,
+          "show_country_name": true,
+          "show_locale_selector": true,
+          "show_privacy_bar": true,
+          "privacy_bar_title": "Cookie policy",
+          "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "enable": false,
+          "apparition_delay": 5,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "title": "Signup for our newsletter",
+          "button_text": "Subscribe",
+          "subtext": "Describe what your customers will receive when subscribing to your newsletter."
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15685250022964305326": {
+        "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
+        "disabled": false,
+        "settings": {}
+      },
+      "7147999719060634790": {
+        "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+        "disabled": false,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#6a6a6a",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
+        }
+      },
+      "9356323809658795675": {
+        "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+        "disabled": false,
+        "settings": {
+          "debugging_global_script": "",
+          "enable_reelPops": true
+        }
+      },
+      "4143866229958350875": {
+        "type": "shopify://apps/upsell-koala-bundles/blocks/deals-embed/2b951f75-113f-4fca-bdf3-c92703235716",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "10557767768680663964": {
+        "type": "shopify://apps/recurpay-subscriptions-app/blocks/recurpay-widget/c600a513-dad8-4030-8697-de47c18881f2",
+        "disabled": false,
+        "settings": {
+          "multiply_price_with_quantity": false,
+          "show_price_in_frequency_dropdown": true,
+          "enable_date_range": true,
+          "start_date": "",
+          "end_date": ""
+        }
+      }
+    }
+  },
+  "presets": {
+    "Sound": {
+      "section_vertical_spacing": "medium",
+      "button_border_radius": 60,
+      "input_border_radius": 8,
+      "block_border_radius": 24,
+      "block_shadow_opacity": 10,
+      "block_shadow_vertical_offset": 18,
+      "background": "#f0f0f0",
+      "text_color": "#1a1a1a",
+      "header_background": "#f0f0f0",
+      "header_text_color": "#1a1a1a",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#1a1a1a",
+      "primary_button_background": "#1a1a1a",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#f0c417",
+      "secondary_button_text_color": "#1a1a1a",
+      "product_card_text_color": "#1a1a1a",
+      "product_primary_badge_background": "#803cee",
+      "heading_font": "din_next_n7",
+      "heading_font_size": "large",
+      "heading_letter_spacing": -2,
+      "text_font": "din_next_n4",
+      "show_page_transition": true,
+      "heading_apparition": "split_fade",
+      "product_color_display": "swatch",
+      "product_info_alignment": "start",
+      "checkout_accent_color": "#f0c417",
+      "checkout_button_color": "#1a1a1a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message": {
+              "type": "message",
+              "settings": {
+                "text": "Announce something here"
+              }
+            }
+          },
+          "block_order": [
+            "message"
+          ],
+          "settings": {
+            "enable_sticky": false,
+            "text_size": "text-xs",
+            "navigation_mode": "scrolling",
+            "scrolling_speed": 10,
+            "background": "#1a1a1a",
+            "text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky": true,
+            "hide_on_scroll": false,
+            "logo": "{{shop.brand.logo}}",
+            "logo_max_width": 120,
+            "logo_mobile_max_width": 100,
+            "menu": "main-menu",
+            "menu_open_trigger": "click",
+            "opening_from": "bottom",
+            "layout": "logo_left_navigation_center",
+            "show_social_media": true,
+            "show_country_flag": true,
+            "show_country_name": false,
+            "transparent_header_text_color": "#ffffff",
+            "reduce_padding": false,
+            "background_opacity": 100,
+            "background_blur_radius": 0
+          }
+        },
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "show_cart_note": true,
+            "show_shipping_text": true,
+            "show_checkout_button": true,
+            "product_card_background": "#ffffff"
+          }
+        },
+        "search-drawer": {
+          "type": "search-drawer",
+          "settings": {
+            "full_width": true,
+            "show_article_category": true,
+            "search_products": true,
+            "search_blog_posts": true,
+            "search_pages": true,
+            "search_collections": true,
+            "search_unavailable_products": "last"
+          }
+        },
+        "static-text-with-icons": {
+          "type": "static-text-with-icons",
+          "blocks": {
+            "free-shipping": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-box",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Free shipping",
+                "content": "<p>Tell your customers about your shipping offer.</p>"
+              }
+            },
+            "customer-support": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-customer-support",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Customer service",
+                "content": "<p>Tell your customers how they can reach you.</p>"
+              }
+            },
+            "discount": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-coupon",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Refer a friend",
+                "content": "<p>Tell your customers about your promotional offers.</p>"
+              }
+            },
+            "payment": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-lock",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Secure payment",
+                "content": "<p>Tel your customers about your payment methods.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "free-shipping",
+            "customer-support",
+            "discount",
+            "payment"
+          ],
+          "settings": {
+            "show_section": true,
+            "full_width": true,
+            "heading_tag": "h6",
+            "text_alignment": "center",
+            "icon_spacing": "small"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "image": "{{shop.brand.logo}}",
+                "image_width": 150,
+                "heading_size": "h3",
+                "title": "Sign up for new stories and personal offers"
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer",
+                "show_menu_title": true
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "About",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "newsletter",
+            "links",
+            "text"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true,
+            "show_country_selector": true,
+            "show_country_flag": true,
+            "show_country_name": true,
+            "show_locale_selector": true,
+            "show_privacy_bar": true,
+            "privacy_bar_title": "Cookie policy",
+            "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
+          }
+        }
+      }
+    },
+    "Home": {
+      "section_vertical_spacing": "medium",
+      "section_boxed_horizontal_spacing": "large",
+      "button_hover_effect": "reverse",
+      "background": "#ffffff",
+      "text_color": "#272727",
+      "success_color": "#708a5c",
+      "warning_color": "#e37e16",
+      "error_color": "#aa2826",
+      "header_background": "#ffffff",
+      "header_text_color": "#272727",
+      "footer_background": "#f2f2f2",
+      "footer_text_color": "#272727",
+      "primary_button_background": "#272727",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#3c619e",
+      "secondary_button_text_color": "#ffffff",
+      "product_card_text_color": "#272727",
+      "product_on_sale_accent": "#e34f4f",
+      "product_sold_out_badge_background": "#bebdb9",
+      "product_primary_badge_background": "#3c619e",
+      "heading_font": "futura_n7",
+      "heading_font_size": "large",
+      "heading_text_transform": "normal",
+      "heading_letter_spacing": -1,
+      "text_font": "futura_n4",
+      "heading_apparition": "split_rotation",
+      "color_swatch_style": "rectangle",
+      "product_color_display": "swatch",
+      "cart_type": "drawer",
+      "checkout_body_background_color": "#f2f2f2",
+      "checkout_sidebar_background_color": "#ffffff",
+      "checkout_accent_color": "#3c619e",
+      "checkout_button_color": "#3c619e",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message": {
+              "type": "message",
+              "settings": {
+                "text": "Announce something here"
+              }
+            }
+          },
+          "block_order": [
+            "message"
+          ],
+          "settings": {
+            "enable_sticky": false,
+            "text_size": "text-xs",
+            "navigation_mode": "arrows",
+            "scrolling_speed": 20,
+            "background": "#272727",
+            "text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky": true,
+            "hide_on_scroll": false,
+            "logo": "{{shop.brand.logo}}",
+            "logo_max_width": 120,
+            "logo_mobile_max_width": 100,
+            "menu": "main-menu",
+            "menu_open_trigger": "hover",
+            "opening_from": "bottom",
+            "layout": "logo_center_navigation_inline",
+            "show_social_media": true,
+            "show_country_flag": true,
+            "show_country_name": false,
+            "transparent_header_text_color": "#ffffff",
+            "reduce_padding": false,
+            "background_opacity": 100,
+            "background_blur_radius": 0
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "image": "{{shop.brand.logo}}",
+                "image_width": 150,
+                "heading_size": "h3",
+                "title": "Sign up for new stories and personal offers"
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer",
+                "show_menu_title": true
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "About",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "newsletter",
+            "links",
+            "text"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_country_selector": true,
+            "show_country_flag": true,
+            "show_country_name": true,
+            "show_privacy_bar": true,
+            "privacy_bar_title": "Cookie policy",
+            "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
+          }
+        },
+        "static-text-with-icons": {
+          "type": "static-text-with-icons",
+          "blocks": {
+            "free-shipping": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-box",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Free shipping",
+                "content": "<p>Tell your customers about your shipping offer.</p>"
+              }
+            },
+            "customer-support": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-customer-support",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Customer service",
+                "content": "<p>Tell your customers how they can reach you.</p>"
+              }
+            },
+            "discount": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-coupon",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Refer a friend",
+                "content": "<p>Tell your customers about your promotional offers.</p>"
+              }
+            },
+            "payment": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-lock",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Secure payment",
+                "content": "<p>Tel your customers about your payment methods.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "free-shipping",
+            "customer-support",
+            "discount",
+            "payment"
+          ],
+          "settings": {
+            "show_section": true,
+            "full_width": true,
+            "heading_tag": "h6",
+            "text_alignment": "center",
+            "icon_spacing": "small"
+          }
+        },
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "show_cart_note": true,
+            "show_shipping_text": true,
+            "show_checkout_button": true,
+            "product_card_background": "#f2f2f2"
+          }
+        },
+        "search-drawer": {
+          "type": "search-drawer",
+          "settings": {
+            "full_width": false,
+            "show_article_category": true,
+            "search_products": true,
+            "search_blog_posts": true,
+            "search_pages": false,
+            "search_collections": true,
+            "search_unavailable_products": "last"
+          }
+        }
+      }
+    },
+    "Shape": {
+      "page_width": 1440,
+      "section_vertical_spacing": "small",
+      "section_boxed_horizontal_spacing": "medium",
+      "button_border_radius": 60,
+      "input_border_radius": 8,
+      "block_border_radius": 20,
+      "icon_stroke_width": 1.5,
+      "button_style": "fill",
+      "button_hover_effect": "reverse",
+      "text_color": "#2a555a",
+      "header_background": "#ffffff",
+      "header_text_color": "#2a555a",
+      "footer_background": "#f7f7f7",
+      "footer_text_color": "#2a555a",
+      "primary_button_background": "#2a555a",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#d9967e",
+      "product_card_text_color": "#2a555a",
+      "heading_font": "itc_berkeley_old_style_n4",
+      "heading_font_size": "large",
+      "heading_text_transform": "normal",
+      "heading_letter_spacing": -1,
+      "text_font": "muli_n4",
+      "text_font_size_desktop": 15,
+      "product_color_display": "swatch",
+      "product_info_alignment": "center",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message": {
+              "type": "message",
+              "settings": {
+                "text": "Announce something here"
+              }
+            }
+          },
+          "block_order": [
+            "message"
+          ],
+          "settings": {
+            "enable_sticky": false,
+            "text_size": "text-xs",
+            "navigation_mode": "scrolling",
+            "scrolling_speed": 12,
+            "background": "#2a555a",
+            "text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky": true,
+            "hide_on_scroll": false,
+            "logo": "{{shop.brand.logo}}",
+            "logo_max_width": 120,
+            "logo_mobile_max_width": 100,
+            "menu": "main-menu",
+            "menu_open_trigger": "click",
+            "opening_from": "bottom",
+            "layout": "logo_center_navigation_inline",
+            "show_social_media": true,
+            "show_country_flag": true,
+            "show_country_name": false,
+            "transparent_header_text_color": "#ffffff",
+            "reduce_padding": false,
+            "background_opacity": 20,
+            "background_blur_radius": 20
+          }
+        },
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "show_cart_note": true,
+            "show_shipping_text": true,
+            "show_checkout_button": true
+          }
+        },
+        "search-drawer": {
+          "type": "search-drawer",
+          "settings": {
+            "full_width": false,
+            "show_article_category": true,
+            "search_products": true,
+            "search_blog_posts": true,
+            "search_pages": true,
+            "search_collections": true,
+            "search_unavailable_products": "last"
+          }
+        },
+        "static-text-with-icons": {
+          "type": "static-text-with-icons",
+          "blocks": {
+            "free-shipping": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-box",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Free shipping",
+                "content": "<p>Tell your customers about your shipping offer.</p>"
+              }
+            },
+            "customer-support": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-customer-support",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Customer service",
+                "content": "<p>Tell your customers how they can reach you.</p>"
+              }
+            },
+            "discount": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-coupon",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Refer a friend",
+                "content": "<p>Tell your customers about your promotional offers.</p>"
+              }
+            },
+            "payment": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-lock",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Secure payment",
+                "content": "<p>Tel your customers about your payment methods.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "free-shipping",
+            "customer-support",
+            "discount",
+            "payment"
+          ],
+          "settings": {
+            "show_section": true,
+            "full_width": true,
+            "heading_tag": "h4",
+            "text_alignment": "center",
+            "icon_spacing": "small"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "image": "{{shop.brand.logo}}",
+                "image_width": 150,
+                "heading_size": "h3",
+                "title": "Sign up for new stories and personal offers"
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer",
+                "show_menu_title": true
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "About",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "newsletter",
+            "links",
+            "text"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true,
+            "show_country_selector": true,
+            "show_country_flag": true,
+            "show_country_name": true,
+            "show_locale_selector": true,
+            "show_privacy_bar": true,
+            "privacy_bar_title": "Cookie policy",
+            "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
+          }
+        }
+      }
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".upgrade-subscription-cart .upgrade-icon-wrapper {display: none !important;}"
+    ]
+  }
+}

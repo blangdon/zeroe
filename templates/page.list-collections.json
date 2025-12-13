@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "collections": [],
+        "collections_per_row": 3,
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "featured_product_Ex8Hth": {
+      "type": "featured-product",
+      "blocks": {
+        "sku_y9XpxQ": {
+          "type": "sku",
+          "disabled": true,
+          "settings": {}
+        },
+        "vendor_yYwUzG": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title_LwwyMM": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges_6dzXTi": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price_UA4LHf": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "button_FwGnDG": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "text": "Buy 2 for $50",
+            "size": "lg",
+            "style": "fill",
+            "stretch": true,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "button_4kjY9g": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "text": "Buy 3 for $57",
+            "size": "lg",
+            "style": "fill",
+            "stretch": true,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "quantity_selector_yWAGrT": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_TbYMVC": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "rating_F9cJFf": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "separator_CFDmLk": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "description_DfdqjD": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "pickup_availability_GXJJ9W": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "sku_y9XpxQ",
+        "vendor_yYwUzG",
+        "title_LwwyMM",
+        "badges_6dzXTi",
+        "price_UA4LHf",
+        "button_FwGnDG",
+        "button_4kjY9g",
+        "quantity_selector_yWAGrT",
+        "buy_buttons_TbYMVC",
+        "rating_F9cJFf",
+        "separator_CFDmLk",
+        "description_DfdqjD",
+        "pickup_availability_GXJJ9W"
+      ],
+      "settings": {
+        "full_width": true,
+        "product": "plant-based-caviar1",
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_product_Ex8Hth"
+  ]
+}

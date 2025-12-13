@@ -1,0 +1,147 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-d25b99f3": {
+      "type": "pf-d25b99f3",
+      "disabled": true,
+      "settings": {}
+    },
+    "media_with_text_h9e8km": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_wLjWXb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/zeroespoon.webp",
+            "media_width": 50,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "A sustainable choice",
+            "content": "<p>At Zeroe, we are dedicated to preserving our oceans and marine life for future generations. We believe in sustainable practices that minimize our environmental</p><p></p><p>Our caviar is entirely plant-based, meaning no fish or animal products are used in its production. This approach significantly reduces our environmental impact, as traditional caviar farming is known for its overfishing and habitat destruction. By choosing Zeroe Caviar, you are supporting a more sustainable food system that conserves marine life and promotes biodiversity.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_wLjWXb"
+      ],
+      "settings": {
+        "full_width": false,
+        "enable_parallax": true,
+        "spacing": "small"
+      }
+    },
+    "media_with_text_g9kRzN": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_4xT4HP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/zeroe_wide_shot_m.jpg",
+            "media_width": 50,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Commitment to Ocean Conservation",
+            "content": "<p>At our core, we believe in the importance of protecting our oceans and marine life. We are dedicated to sustainability and responsibly source our seaweed-based caviar to ensure that we minimize our environmental impact. Our commitment to marine conservation means you can enjoy our luxurious caviar with peace of mind, knowing that you are making a responsible choice for the planet. Join us in preserving the beauty of our oceans for future generations to come.<br/></p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4xT4HP"
+      ],
+      "settings": {
+        "full_width": false,
+        "enable_parallax": true,
+        "spacing": "small"
+      }
+    },
+    "image_with_text_overlay_Ce9RGM": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_F3VF6n": {
+          "type": "heading",
+          "settings": {
+            "text": "",
+            "heading_tag": "h1"
+          }
+        },
+        "subheading_8qbTkF": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_F3VF6n",
+        "subheading_8qbTkF"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/Zeroe_NYC_apartment_product_shoot.png",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "impact_text_qQayXx": {
+      "type": "impact-text",
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "text_alignment": "center",
+        "impact_text_style": "fill",
+        "text_divider": "none",
+        "impact_text_size_ratio": 1,
+        "background": "",
+        "background_gradient": "",
+        "heading_text_color": "",
+        "heading_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "pf-d25b99f3",
+    "media_with_text_h9e8km",
+    "media_with_text_g9kRzN",
+    "image_with_text_overlay_Ce9RGM",
+    "impact_text_qQayXx"
+  ]
+}

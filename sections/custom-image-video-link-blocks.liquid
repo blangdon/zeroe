@@ -1,0 +1,135 @@
+{%- render 'section-spacing-collapsing' -%}
+
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+CSS
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+<style>
+  {%- assign block_size = section.settings.block_size -%}
+
+  #shopify-section-{{ section.id }} .media-link-blocks {
+    --media-link-blocks-item-width: {% if block_size == 'small' %}32vw{% elsif block_size == 'medium' %}38vw{% else %}48vw{% endif %};
+    --media-link-blocks-grid: auto / auto-flow var(--media-link-blocks-item-width);
+
+    --content-over-media-gap: var(--grid-gutter);
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} .media-link-blocks {
+      --media-link-blocks-item-width: {% if block_size == 'small' %}18vw{% elsif block_size == 'medium' %}22vw{% else %}26vw{% endif %};
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .media-link-blocks {
+      --media-link-blocks-items-per-row: {% if block_size == 'small' %}6{% elsif block_size == 'medium' %}5{% else %}4{% endif %};
+      --media-link-blocks-grid: auto / auto-flow calc(var(--container-inner-width) / var(--media-link-blocks-items-per-row) - (var(--grid-gutter) / var(--media-link-blocks-items-per-row) * (var(--media-link-blocks-items-per-row) - 1)));
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    #shopify-section-{{ section.id }} .media-link-blocks {
+      --media-link-blocks-items-per-row: {% if block_size == 'small' %}7{% elsif block_size == 'medium' %}6{% else %}5{% endif %};
+    }
+  }
+</style>
+
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+LIQUID
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<div {% render 'section-properties' %}>
+  <div class="section-stack">
+    {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, heading_color: section.settings.heading_color, heading_gradient: section.settings.heading_gradient, content: section.settings.content, link_text: section.settings.link_text, link_url: section.settings.link_url -%}
+
+    <div class="floating-controls-container">
+      {%- assign scroll_area_id = 'scroll-area-' | append: section.id -%}
+
+      <media-link-blocks id="{{ scroll_area_id }}" class="media-link-blocks scroll-area bleed md:unbleed">
+        {%- for block in section.blocks -%}
+          <div {% render 'surface', class: 'media-link-blocks__item group rounded', background: block.settings.background, text_color: block.settings.text_color, background_fallback: 'bg-secondary' %} {{ block.shopify_attributes }}>
+            {%- if block.settings.media_type == 'video' -%}
+              <video autoplay muted loop playsinline class="media-link-blocks__video">
+                <source src="{{ block.settings.video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            {%- elsif block.settings.media_type == 'image' -%}
+              <a {% if block.settings.link_url %}href="{{ block.settings.link_url }}"{% endif %} class="media-link-blocks__inner">
+                {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 160px, 285px', widths: '200,300,400,500,600,700,800,900,1000,1200', class: 'media-link-blocks__image zoom-image' }}
+              </a>
+            {%- endif -%}
+            {%- if block.settings.link_text != blank -%}
+              <p class="media-link-blocks__title text-center bold">
+                {{ block.settings.link_text | escape }}
+              </p>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </media-link-blocks>
+
+      <button is="prev-button" class="circle-button circle-button--fill border group" aria-controls="{{ scroll_area_id }}" disabled>
+        <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+        <span class="animated-arrow animated-arrow--reverse"></span>
+      </button>
+
+      <button is="next-button" class="circle-button circle-button--fill border group" aria-controls="{{ scroll_area_id }}">
+        <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+        <span class="animated-arrow"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Media link blocks",
+  "class": "shopify-section--media-link-blocks",
+  "presets": [
+    {
+      "name": "Video & Image Carousel"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Media block",
+      "settings": [
+        {
+          "type": "select",
+          "id": "media_type",
+          "label": "Media Type",
+          "options": [
+            {"value": "image", "label": "Image"},
+            {"value": "video", "label": "Video"}
+          ],
+          "default": "image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1200 x 1400px .jpg recommended"
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

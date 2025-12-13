@@ -1,0 +1,515 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_JawBWU": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_cgVMDp": {
+          "type": "subheading",
+          "settings": {
+            "text": "Zeroe Caviar"
+          }
+        },
+        "heading_TX7nrr": {
+          "type": "heading",
+          "settings": {
+            "text": "Premium plant-based caviar",
+            "heading_tag": "h0"
+          }
+        },
+        "richtext_Hp7FFQ": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Premium plant-based caviar made from seaweed sustainably  harvested off the southern coast of France.</p>"
+          }
+        },
+        "button_f8VpaN": {
+          "type": "button",
+          "settings": {
+            "style": "fill",
+            "size": "xl",
+            "text": "SHOP NOW",
+            "url": "https://zeroecaviar.com/products/plant-based-caviar-p3",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_cgVMDp",
+        "heading_TX7nrr",
+        "richtext_Hp7FFQ",
+        "button_f8VpaN"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "enable_parallax": false,
+        "image_size": "fill",
+        "image": "shopify://shop_images/ZeroeHero_Desktop.jpg",
+        "mobile_image": "shopify://shop_images/ZeroeHero_Mobile_84179669-c55d-44ac-813e-68ea8dda5377.jpg",
+        "mobile_text_position": "place-self-start-center text-center",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 34
+      }
+    },
+    "featured_product_a76U4P": {
+      "type": "featured-product",
+      "blocks": {
+        "liquid_DiaPqN": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"desktop-only\">\n<div class=\"product-info__text\">\n            <div class=\"prose\"><h1>It's Caviar, reimagined</h1></div>\n          </div>\n\n\n<div style=\"margin: 1rem 0;\" class=\"product-info__text\">\n            <div class=\"prose\" id=\"intro-expand\">\n\n<p>Zeroe Caviar is a plant-based fish egg alternative that boasts the texture of traditional caviar with superior flavor, and it's 100% cruelty-free. It's made with ... <span id=\"read-more\">Read more.</span></p>\n\n<p class=\"expanded-text\"> seaweed grown organically off the coast of France. The seaweed is washed and suspended in clean water, then extracted and transformed into round spheres. The crisp, juicy flavor is achieved using all natural ingredients including cayenne, black pepper, turmeric, laurel, leek, dill and tarragon sourced from Norway, Iceland, Greenland, Scotland & Spain.</p>\n</div>\n          </div>\n\n\n<img class=\"hero-stars\" src=\"https://cdn.shopify.com/s/files/1/0742/2849/8706/files/stars_532351d2-f3e9-41b8-9996-41babc17e845.png\" />\n\n<a href=\"#reviews\" class=\"hero-stars-text\">\n5 stars - <span style=\"font-weight: 500;\">Read reviews</span>\n</a>\n\n\n<style>\n  /* Initially hide the expanded text */\n  #intro-expand .expanded-text {\n    display: none;\n  }\n\n  /* Make the expanded text visible when a \"visible\" class is added to the parent .prose */\n  #intro-expand.visible .expanded-text {\n    display: block;\n  }\n\n  /* Style the read more/read less button for better UX */\n  #read-more {\n    cursor: pointer;\nfont-weight: 500;\n    text-decoration: underline;\n  }\n</style>\n\n\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    const readMoreButton = document.getElementById('read-more');\n    const proseElement = document.getElementById('intro-expand');\n\n    if (readMoreButton) {\n      readMoreButton.addEventListener('click', function () {\n        proseElement.classList.toggle('visible'); // Toggle 'visible' class\n\n        // Toggle the text content of the \"read more\" button\n        if (proseElement.classList.contains('visible')) {\n          readMoreButton.textContent = 'Read less.';\n        } else {\n          readMoreButton.textContent = 'Read more.';\n        }\n      });\n    }\n  });\n</script>\n</div>"
+          }
+        },
+        "title_jjCjTX": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges_HJRy8r": {
+          "type": "badges",
+          "settings": {}
+        },
+        "liquid_kXez3m": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<p style=\"font-weight: 400; font-size: 1.3rem; margin-bottom: 0; margin-top: 1.5rem;\">\nZeroe, plant-based caviar.\n</p>"
+          }
+        },
+        "price_iGcEgy": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "liquid_JmRmBn": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<p class=\"small\" style=\"margin-bottom: 7px;\">\n<br>\n<span style=\"font-weight: 600;\">FREE shipping</span> on two or more jars\n</p>\n\n<style>\n  #discount1, #discount2 {\n    position: relative;\n    display: inline-block;\n    cursor: pointer;\n  }\n\n  #discount1:hover .tooltip, #discount2:hover .tooltip {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  .tooltip {\n    visibility: hidden;\n    opacity: 0;\n    width: max-content;\nbackground-color: #333;\ncolor: #fff;\ntext-align: center;\npadding: 8px 14px;\nborder-radius: 6px;\nposition: absolute;\nbottom: 125%;\nleft: 50%;\ntransform: translateX(-50%);\nz-index: 1000;\ntransition: opacity 0.3s ease;\nfont-size: 14px;\nwhite-space: nowrap;\n  }\n\n  .tooltip::after {\n    content: \"\";\n    position: absolute;\n    top: 100%; /* Arrow pointing down */\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: #333 transparent transparent transparent;\n  }\n</style>"
+          }
+        },
+        "rating_hW7FYp": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "separator_qaxGdD": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "description_8K364y": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "offer_qm3ini": {
+          "type": "offer",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "start",
+            "icon_position": "aligned",
+            "icon": "picto-coupon",
+            "icon_width": 24,
+            "title": "Buy 2 Get 1 FREE!",
+            "content": "<p>Add 3 jars to your cart to get 1 free</p>",
+            "background": "#eaf2ed",
+            "text_color": "#00a341"
+          }
+        },
+        "discount_badge_mmdpcw": {
+          "type": "discount_badge",
+          "settings": {
+            "discount_badge1": "{{ section.settings.product.metafields.product.discount_badge1.value }}",
+            "discount_badge2": "{{ section.settings.product.metafields.product.discount_badge2.value }}"
+          }
+        },
+        "variant_picker_49TEga": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_YtrAkp": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_PyzeFW": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_payment_button": false,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "pickup_availability_fKahKp": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "liquid_DiaPqN",
+        "title_jjCjTX",
+        "badges_HJRy8r",
+        "liquid_kXez3m",
+        "price_iGcEgy",
+        "liquid_JmRmBn",
+        "rating_hW7FYp",
+        "separator_qaxGdD",
+        "description_8K364y",
+        "offer_qm3ini",
+        "discount_badge_mmdpcw",
+        "variant_picker_49TEga",
+        "quantity_selector_YtrAkp",
+        "buy_buttons_PyzeFW",
+        "pickup_availability_fKahKp"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "product": "plant-based-caviar-p3",
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "rich_text_RHBaEi": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_txdhDP": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_4Fy3BD": {
+          "type": "heading",
+          "settings": {
+            "text": "Trusted by Michelin-starred chefs & fine dining establishments worldwide",
+            "heading_tag": "h5",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_TjjYAx": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_txdhDP",
+        "heading_4Fy3BD",
+        "richtext_TjjYAx"
+      ],
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "logo_list_cfPCpr": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_XqmYXU": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Four_Seasons_Logo.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_TJyMdL": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Restaurant_Daniel_Logo_97ab205d-e5ad-4bc5-b5fe-2bfa6104b8ca.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_kxEEiC": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Mila_Logo.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_yWb4BB": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Crustacean_Logo.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_Bd7ckM": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Ava_Mediterranean_Logo.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_drDHPQ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Leku_Logo.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_XqmYXU",
+        "logo_TJyMdL",
+        "logo_kxEEiC",
+        "logo_yWb4BB",
+        "logo_Bd7ckM",
+        "logo_drDHPQ"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "Trusted by Michelin-starred chefs & fine dining establishments worldwide",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": "#ffffff"
+      }
+    },
+    "text_with_icons_nzCTRx": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_Fgt3Af": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-leaf",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Plant-based",
+            "content": ""
+          }
+        },
+        "item_aXtN3W": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-earth",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Sustainable",
+            "content": ""
+          }
+        },
+        "item_gN3kee": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Affordable",
+            "content": ""
+          }
+        },
+        "item_3k946i": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-validation",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Delicious",
+            "content": ""
+          }
+        },
+        "item_AVyB7F": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-timer",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Shelf-stable",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_Fgt3Af",
+        "item_aXtN3W",
+        "item_gN3kee",
+        "item_3k946i",
+        "item_AVyB7F"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "Why Zeroe?",
+        "heading_tag": "h5",
+        "text_alignment": "center",
+        "icon_spacing": "small",
+        "background": "",
+        "background_gradient": "linear-gradient(180deg, rgba(250, 242, 237, 1) 100%, rgba(221, 39, 57, 1) 100%)",
+        "text_color": ""
+      }
+    },
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "disabled": true,
+      "settings": {}
+    },
+    "image_with_text_overlay_NRXUxT": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_XeFjKp": {
+          "type": "subheading",
+          "settings": {
+            "text": "Celebrate more"
+          }
+        },
+        "heading_FCBzfx": {
+          "type": "heading",
+          "settings": {
+            "text": "Elevate the way you dine",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_P7W7B6": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Turn ordinary meals into extraordinary occasions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_XeFjKp",
+        "heading_FCBzfx",
+        "richtext_P7W7B6"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "fill",
+        "image": "shopify://shop_images/Mila_professional_avocado.png",
+        "mobile_text_position": "place-self-start-end text-end",
+        "desktop_text_position": "sm:place-self-start sm:text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "images_with_text_scrolling_gBAgmz": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_iJLqhy": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Leku_Strawberry_tart_dish.png",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Welcome to culinary bliss",
+            "content": "<p>Treat yourself to the ultimate indulgence with our premium plant-based caviar, meticulously crafted from sustainably sourced seaweed. With its delicate textures and exquisite flavors, our caviar will take your taste buds on an unforgettable journey. Made with a deep commitment to marine conservation, our guilt-free caviar lets you savor each bite with a clear conscience. Join us in elevating your dining experience to new heights with our extraordinary caviar that combines luxury, taste, and sustainability in every bite.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_iJLqhy"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "custom_liquid_PRD8r8": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div id=\"reviews\" style=\"max-width: 1000px; margin: 0 auto;\">\n\n<div class=\"prose\" style=\"margin-bottom: 2rem;\">\n<h2 class=\"h2\" style=\"text-align:center;\">See why our customers love Zeroe Caviar</h2>\n\n</div>\n\n<script type=\"text/javascript\" src=\"https://cdn.grw.reputon.com/assets/widget.js?shop=zeroe-9068.myshopify.com\"  defer></script>\n<div class=\"reputon-google-reviews-widget\"\n                 data-content-index=\"1\"\n                 data-theme=\"light\"\n                 data-type=\"standard\"\n                 data-show-review-photos=\"true\"\n                 data-write-review=\"false\"></div>\n</div></div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_JawBWU",
+    "featured_product_a76U4P",
+    "rich_text_RHBaEi",
+    "logo_list_cfPCpr",
+    "text_with_icons_nzCTRx",
+    "pagefly-home",
+    "image_with_text_overlay_NRXUxT",
+    "images_with_text_scrolling_gBAgmz",
+    "custom_liquid_PRD8r8"
+  ]
+}
