@@ -511,7 +511,7 @@ function updatePerItemPrice_subscriptionMode() {
         let qty = parseInt((qtyText.match(/\d+/) || ['1'])[0]);
 
         let perJar = (total / qty).toFixed(2);
-        $(this).find(".koala-deal__tier__badge").text(`$${perJar} / jar`);
+        $(this).find(".koala-deal__tier__badge").text(`$${perJar} per jar`);
     });
 }
 
