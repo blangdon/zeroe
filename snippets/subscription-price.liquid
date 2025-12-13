@@ -420,7 +420,7 @@ function updateOneTimePrices() {
         // Remove any existing quantity element first
         container.find(".selected_quantity").remove();
 
-        const qtyHtml = `${quantity}× ${variantTitle || ''}`.trim();
+        const qtyHtml = `${quantity}× ${variantTitle || ''} jars`.trim();
         
         // Append quantity directly inside .recurpay__group_title
         container.find(".recurpay__group_title").append(`<div class="selected_quantity">${qtyHtml}</div>`);
@@ -491,7 +491,7 @@ function updateSubscriptionPrices() {
     // Quantity
     let quantity = (checkedTier.find(".koala-deal__tier__title").text().match(/\d+/) || ['0'])[0];
     let variantTitle = $('input[name="id"]').attr('variant-title') || '';
-    let qtyHtml = `${quantity}× ${variantTitle}`.trim();
+    let qtyHtml = `${quantity}× ${variantTitle} jars`.trim();
     let qtyElem = container.find('.selected_quantity');
     if (qtyElem.length) qtyElem.text(qtyHtml);
     else container.find('.recurpay__group_subtitle').prepend(`<div class="selected_quantity">${qtyHtml}</div>`);
