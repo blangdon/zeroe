@@ -427,7 +427,7 @@ subtitleElem.text(updatedText);
   ['onetime-purchase', 'subscription-purchase'].forEach((type) => {
     let container = $(`.recurpay__widget_container[data-type="${type}"]`);
     container.find('.selected_quantity').remove();
-    const qtyHtml = `${quantity}× ${variantTitle || ''}`.trim();
+    const qtyHtml = `${quantity}× ${variantTitle || ''} jars`.trim();
     container.find('.recurpay__group_title').append(`<div class="selected_quantity">${qtyHtml}</div>`);
   });
 }
@@ -492,7 +492,7 @@ function updateSubscriptionPrices() {
 
   let quantity = (checkedTier.find('.koala-deal__tier__title').text().match(/\d+/) || ['0'])[0];
   let variantTitle = $('input[name="id"]').attr('variant-title') || '';
-  let qtyHtml = `${quantity}× ${variantTitle}`.trim();
+  let qtyHtml = `${quantity}× ${variantTitle} jars`.trim();
   let qtyElem = container.find('.selected_quantity');
   if (qtyElem.length) qtyElem.text(qtyHtml);
   else container.find('.recurpay__group_subtitle').prepend(`<div class="selected_quantity">${qtyHtml}</div>`);
@@ -509,7 +509,7 @@ function updatePerItemPrice_subscriptionMode() {
     let qty = parseInt((qtyText.match(/\d+/) || ['1'])[0]);
 
     let perJar = (total / qty).toFixed(2);
-    $(this).find('.koala-deal__tier__badge').text(`$${perJar} / jar`);
+    $(this).find('.koala-deal__tier__badge').text(`$${perJar} per jar`);
   });
 }
 
