@@ -1,690 +1,676 @@
-{% if product.metafields.custom.subscription_discounts.value %}   
-    {% assign discounts_json = product.metafields.custom.subscription_discounts.value | parse_json %}
+{% if product.metafields.custom.subscription_discounts.value %}
+  {% assign discounts_json = product.metafields.custom.subscription_discounts.value | parse_json %}
 
-    {% if discounts_json.children %}
+  {% if discounts_json.children %}
     <ul class="sub_discount">
-        {% for child in discounts_json.children %}
-        {% if child.type == "list" %}
-            {% for item in child.children %}
-            {% if item.type == "list-item" %}
-                {% assign text = item.children[0].value %}
-                {% assign parts = text | split: " - " %}
-                <li class="dis_value discount-{{ forloop.index }}">
+      {% for child in discounts_json.children %}
+        {% if child.type == 'list' %}
+          {% for item in child.children %}
+            {% if item.type == 'list-item' %}
+              {% assign text = item.children[0].value %}
+              {% assign parts = text | split: ' - ' %}
+              <li class="dis_value discount-{{ forloop.index }}">
                 <span class="quantity">{{ parts[0] }}</span>
                 <span class="percent">{{ parts[1] }}</span>
-                </li>
+              </li>
             {% endif %}
-            {% endfor %}
+          {% endfor %}
         {% endif %}
-        {% endfor %}
+      {% endfor %}
     </ul>
-    {% endif %}
+  {% endif %}
 
-
-<style>
+  <style>
     /* RecurePay Subscription */
 
-.product-info__text .recurpay_heading {
-    margin-bottom: -10px;
-}
-.product-info__text .recurpay_heading p {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 20.79px;
-    text-align: center;
-    color: #868686;
-}
-.recurpay__widget .recurpay__group_header {
-    align-items: flex-start !important;
-    padding: 15px !important;
-}
-.recurpay__widget.recurpay__subscription_first {
-    flex-direction: column-reverse !important;
-}
-.recurpay__widget .recurpay__widget_container {
-    border: 0 !important;
-    border-radius: 20px !important;
-    box-shadow: 0 0 0 1px #C6C6C6 !important;
-    cursor: pointer;
-}
-.recurpay__widget .recurpay__widget_container.recurpay__widget_container--selected {
-    box-shadow: 0 0 0 2px #123F35 !important;
-    border: 0 !important;
-}
-.recurpay__widget .recurpay__group_content_wrapper {
-    display: block !important;
-    height: auto !important;
-    padding-left: 40px !important;
-    width: 80%;
-}
-.recurpay__widget .recurpay__widget_container--selected .recurpay__radio_group svg circle {
-    stroke: #123F35 !important;
-}
-.recurpay__widget .recurpay__widget_container--selected .recurpay__radio_group svg .recurpay__radio_svg {
-    fill: #123F35 !important;
-}
-.recurpay__widget .recurpay__group_selling_price {
-    font-size: 19px !important;
-    font-weight: 600;
-    text-align: right;
-}
-.recurpay__widget .recurpay__group_compare_price {
-    font-size: 18px !important;
-    font-weight: 500 !important;
-    color: #868686 !important;
-    line-height: normal;
-}
-.recurpay__widget .recurpay__widget_container.recurpay__widget_container--selected .recurpay__group_label .recurpay__group_header .recurpay__radio_svg {
-    transform: scale(.9) !important;
-}
-.recurpay__widget .recurpay__group_discounted_price {
-    color: #123F35 !important;
-}
-/* .recurpay__widget .recurpay__offer_wrapper {
+    .product-info__text .recurpay_heading {
+      margin-bottom: -10px;
+    }
+    .product-info__text .recurpay_heading p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20.79px;
+      text-align: center;
+      color: #868686;
+    }
+    .recurpay__widget .recurpay__group_header {
+      align-items: flex-start !important;
+      padding: 15px !important;
+    }
+    .recurpay__widget.recurpay__subscription_first {
+      flex-direction: column-reverse !important;
+    }
+    .recurpay__widget .recurpay__widget_container {
+      border: 0 !important;
+      border-radius: 20px !important;
+      box-shadow: 0 0 0 1px #c6c6c6 !important;
+      cursor: pointer;
+    }
+    .recurpay__widget .recurpay__widget_container.recurpay__widget_container--selected {
+      box-shadow: 0 0 0 2px #123f35 !important;
+      border: 0 !important;
+    }
+    .recurpay__widget .recurpay__group_content_wrapper {
+      display: block !important;
+      height: auto !important;
+      padding-left: 40px !important;
+      width: 80%;
+    }
+    .recurpay__widget .recurpay__widget_container--selected .recurpay__radio_group svg circle {
+      stroke: #123f35 !important;
+    }
+    .recurpay__widget .recurpay__widget_container--selected .recurpay__radio_group svg .recurpay__radio_svg {
+      fill: #123f35 !important;
+    }
+    .recurpay__widget .recurpay__group_selling_price {
+      font-size: 19px !important;
+      font-weight: 600;
+      text-align: right;
+    }
+    .recurpay__widget .recurpay__group_compare_price {
+      font-size: 18px !important;
+      font-weight: 500 !important;
+      color: #868686 !important;
+      line-height: normal;
+    }
+    .recurpay__widget
+      .recurpay__widget_container.recurpay__widget_container--selected
+      .recurpay__group_label
+      .recurpay__group_header
+      .recurpay__radio_svg {
+      transform: scale(0.9) !important;
+    }
+    .recurpay__widget .recurpay__group_discounted_price {
+      color: #123f35 !important;
+    }
+    /* .recurpay__widget .recurpay__offer_wrapper {
     display: none !important;
 } */
-.bot-offer-list-extra-wrapper:last-child .bot-offer-list-line, .recurpay-hide, button.recurpay-hide {
-    display: block !important;
-}
-.recurpay__widget .recurpay__group_title {
-    display: flex;
-    flex-direction: column;
-    font-size: 19px !important;
-}
-.recurpay__widget .recurpay__action {
-    display: none;
-}
-.recurpay__widget .recurpay__group_content {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 20px;
-}
-.recurpay__widget .recurpay__group_frequency.recommended_frequency .recommended_frequency_tag {
-    display: none !important;
-}
-.recurpay__widget .recurpay__group_frequency .recurpay__frequency_label_title:after, .recurpay__widget .recurpay__group_frequency .recurpay__frequency_label_title:before {
-    display: none !important;
-}
-.recurpay__widget .recurpay__frequency {
-    font-weight: 600 !important;
-    font-size: 19px !important;
-    line-height: 20.79px;
-    border: 1px solid #123F35 !important;
-    border-radius: 11px;
-    padding: 10px 15px !important;
-    margin-bottom: 20px !important;
-    background-size: 15px;
-}
-.recurpay__widget .recurpay__group_frequency .recurpay__frequency_label_title {
-    font-weight: 500 !important;
-    font-size: 16px !important;
-    color: #868686 !important;
-    text-transform: inherit !important;
-    padding: 0 !important;
-}
-.recurpay__widget .recurpay__description {
-    padding-left: 3px;
-}
-.recurpay__widget .recurpay__description li {
-    list-style: none;
-    color: #868686;
-    margin: 0 !important;
-    line-height: 23px;
-    position: relative;
-    padding-left: 10px;
-}
-.recurpay__widget .recurpay__description li:before {
-    content: "";
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    left: -15px;
-    top: 3px;
-    background-repeat: no-repeat;
-    background-size: 18px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'><path d='M16.7758 5.09199C16.461 5.4438 16.1648 5.79561 15.887 6.14742C15.7574 6.29555 15.6463 6.44368 15.5167 6.61033C15.7389 7.29544 15.8685 8.03609 15.8685 8.79526C15.85 12.6837 12.6837 15.85 8.79526 15.85C4.90683 15.85 1.74054 12.6837 1.74054 8.79526C1.74054 4.90683 4.90683 1.74054 8.79526 1.74054C10.0359 1.74054 11.2209 2.07383 12.2393 2.62932C12.5911 2.27751 12.9429 1.94421 13.3132 1.61092L13.554 1.40724C12.1837 0.518457 10.5543 0 8.79526 0C3.94398 0 0 3.94398 0 8.79526C0 13.6465 3.94398 17.5905 8.79526 17.5905C13.6465 17.5905 17.5905 13.6465 17.5905 8.79526C17.5905 7.4806 17.2943 6.22149 16.7758 5.09199Z' fill='%23868686'/><path d='M11.2762 6.18448C10.6096 6.9992 9.98003 7.83244 9.38751 8.68419C9.09125 9.11006 8.79498 9.55446 8.51724 9.99885L6.14715 7.07327C5.8694 6.73997 5.38798 6.66591 5.01765 6.90662C4.62881 7.16585 4.53623 7.68431 4.79546 8.07315L7.77659 12.4986C7.85065 12.6097 7.96175 12.7207 8.09136 12.7948C8.25801 12.9059 8.44317 12.9615 8.62834 12.9615C8.98015 12.9615 9.36899 12.7763 9.53564 12.4615C9.70229 12.1653 10.5355 10.6284 11.091 9.79517C11.628 8.96193 12.1835 8.14722 12.7945 7.35101C13.387 6.55481 14.0166 5.77712 14.6832 5.03647C15.3313 4.29582 16.0349 3.53665 16.7385 2.88858L16.757 2.87006C17.0903 2.55528 17.1088 2.03683 16.8126 1.70353C16.4978 1.35172 15.9793 1.31469 15.6275 1.62947C14.8128 2.3516 14.0907 3.07374 13.3685 3.83291C12.6279 4.59208 11.9242 5.36977 11.2762 6.18448Z' fill='%23868686'/></svg>");
-}
-#shopify-buyer-consent {
-    display: none;
-}
-.recurpay__widget .recurpay__group_subtitle {
-    order: 2;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    color: #E62A07 !important;
-}
-.recurpay__widget .recurpay__group_title .selected_quantity {
-    order: 1;
-    font-weight: 500;
-    font-size: 14px;
-    color: #868686;
-    padding: 5px 0;
-}
-.product-info__buy-buttons {
-    margin-top: 0;
-}
-.recurpay__widget_container[data-type="subscription-purchase"] {
-    margin: 0 !important
-}
-html body .upgrade-subscription-cart .cart-plan-dropdown-wrapper .cart-plan-dropdown {
-    color: unset !important;
-}
+    .bot-offer-list-extra-wrapper:last-child .bot-offer-list-line,
+    .recurpay-hide,
+    button.recurpay-hide {
+      display: block !important;
+    }
+    .recurpay__widget .recurpay__group_title {
+      display: flex;
+      flex-direction: column;
+      font-size: 19px !important;
+    }
+    .recurpay__widget .recurpay__action {
+      display: none;
+    }
+    .recurpay__widget .recurpay__group_content {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+    .recurpay__widget .recurpay__group_frequency.recommended_frequency .recommended_frequency_tag {
+      display: none !important;
+    }
+    .recurpay__widget .recurpay__group_frequency .recurpay__frequency_label_title:after,
+    .recurpay__widget .recurpay__group_frequency .recurpay__frequency_label_title:before {
+      display: none !important;
+    }
+    .recurpay__widget .recurpay__frequency {
+      font-weight: 600 !important;
+      font-size: 19px !important;
+      line-height: 20.79px;
+      border: 1px solid #123f35 !important;
+      border-radius: 11px;
+      padding: 10px 15px !important;
+      margin-bottom: 20px !important;
+      background-size: 15px;
+    }
+    .recurpay__widget .recurpay__group_frequency .recurpay__frequency_label_title {
+      font-weight: 500 !important;
+      font-size: 16px !important;
+      color: #868686 !important;
+      text-transform: inherit !important;
+      padding: 0 !important;
+    }
+    .recurpay__widget .recurpay__description {
+      padding-left: 3px;
+    }
+    .recurpay__widget .recurpay__description li {
+      list-style: none;
+      color: #868686;
+      margin: 0 !important;
+      line-height: 23px;
+      position: relative;
+      padding-left: 10px;
+    }
+    .recurpay__widget .recurpay__description li:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: -15px;
+      top: 3px;
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'><path d='M16.7758 5.09199C16.461 5.4438 16.1648 5.79561 15.887 6.14742C15.7574 6.29555 15.6463 6.44368 15.5167 6.61033C15.7389 7.29544 15.8685 8.03609 15.8685 8.79526C15.85 12.6837 12.6837 15.85 8.79526 15.85C4.90683 15.85 1.74054 12.6837 1.74054 8.79526C1.74054 4.90683 4.90683 1.74054 8.79526 1.74054C10.0359 1.74054 11.2209 2.07383 12.2393 2.62932C12.5911 2.27751 12.9429 1.94421 13.3132 1.61092L13.554 1.40724C12.1837 0.518457 10.5543 0 8.79526 0C3.94398 0 0 3.94398 0 8.79526C0 13.6465 3.94398 17.5905 8.79526 17.5905C13.6465 17.5905 17.5905 13.6465 17.5905 8.79526C17.5905 7.4806 17.2943 6.22149 16.7758 5.09199Z' fill='%23868686'/><path d='M11.2762 6.18448C10.6096 6.9992 9.98003 7.83244 9.38751 8.68419C9.09125 9.11006 8.79498 9.55446 8.51724 9.99885L6.14715 7.07327C5.8694 6.73997 5.38798 6.66591 5.01765 6.90662C4.62881 7.16585 4.53623 7.68431 4.79546 8.07315L7.77659 12.4986C7.85065 12.6097 7.96175 12.7207 8.09136 12.7948C8.25801 12.9059 8.44317 12.9615 8.62834 12.9615C8.98015 12.9615 9.36899 12.7763 9.53564 12.4615C9.70229 12.1653 10.5355 10.6284 11.091 9.79517C11.628 8.96193 12.1835 8.14722 12.7945 7.35101C13.387 6.55481 14.0166 5.77712 14.6832 5.03647C15.3313 4.29582 16.0349 3.53665 16.7385 2.88858L16.757 2.87006C17.0903 2.55528 17.1088 2.03683 16.8126 1.70353C16.4978 1.35172 15.9793 1.31469 15.6275 1.62947C14.8128 2.3516 14.0907 3.07374 13.3685 3.83291C12.6279 4.59208 11.9242 5.36977 11.2762 6.18448Z' fill='%23868686'/></svg>");
+    }
+    #shopify-buyer-consent {
+      display: none;
+    }
+    .recurpay__widget .recurpay__group_subtitle {
+      order: 2;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      color: #e62a07 !important;
+    }
+    .recurpay__widget .recurpay__group_title .selected_quantity {
+      order: 1;
+      font-weight: 500;
+      font-size: 14px;
+      color: #868686;
+      padding: 5px 0;
+    }
+    .product-info__buy-buttons {
+      margin-top: 0;
+    }
+    .recurpay__widget_container[data-type='subscription-purchase'] {
+      margin: 0 !important;
+    }
+    html body .upgrade-subscription-cart .cart-plan-dropdown-wrapper .cart-plan-dropdown {
+      color: unset !important;
+    }
 
+    @media screen and (max-width: 699px) {
+      .recurpay__widget .recurpay__group_content_wrapper {
+        width: 100%;
+      }
+    }
 
-@media screen and (max-width: 699px) {
-  .recurpay__widget .recurpay__group_content_wrapper {
-    width: 100%;
-  }
-}
+    /* Koala Bundles */
 
-/* Koala Bundles */
+    .koala-deal__tier__subtitle {
+      color: #e62a07 !important;
+      font-size: 16px !important;
+    }
+    .koala-deal__tier__body {
+      align-items: flex-start !important;
+    }
+    .koala-deal:has(.koala-ribbon) .koala-deal__tier {
+      padding-block: 5px !important;
+    }
+    .koala-deal__tiers__list > .koala-deal__tiers__list-item .koala-deal__tier__input:checked + .koala-deal__tier {
+      background: transparent !important;
+    }
+    .koala-deal__tier {
+      border-radius: 20px !important;
+    }
+    .koala-deal__tier__image {
+      width: 65px !important;
+      height: 65px !important;
+      border-radius: 12px !important;
+    }
+    .koala-deal__tier .koala-deal__tier__content-container {
+      align-items: flex-start !important;
+    }
+    .koala-deal__tier__title {
+      color: #123f35 !important;
+      font-size: 19px !important;
+      line-height: 20px;
+    }
+    .koala-deal__tier__badge {
+      background: transparent !important;
+      font-size: 14px !important;
+      color: #868686 !important;
+      padding: 0 !important;
+    }
+    .koala-deal__tier__title-container {
+      flex-direction: column !important;
+    }
+    .koala-deal__tier__price {
+      order: 2;
+      color: var(--regular-price-color) !important;
+      text-decoration: line-through;
+    }
+    .koala-deal__tier__selling-price {
+      order: 1;
+      color: #123f35;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: normal;
+      text-decoration: none !important;
+    }
+    .koala-deal__tier__regular-price--hidden {
+      display: none !important;
+    }
+    koala-countdown.koala-countdown.koala-countdown-AK202VWtNSng2bGhLb__upsell_koala_bundles_deals_block_WRtRgJ {
+      display: none !important;
+    }
+    .koala-deal__tier__image {
+      position: relative;
+    }
+    span.qty-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: #123f35;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+      border-radius: 50%;
+      min-width: 22px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(25%, 25%);
+    }
+    ul.sub_discount {
+      display: flex;
+      visibility: hidden;
+      margin: 0;
+    }
+  </style>
 
-.koala-deal__tier__subtitle {
-    color: #e62a07!important;
-    font-size: 16px !important;
-}
-.koala-deal__tier__body {
-    align-items: flex-start !important;
-}
-.koala-deal:has(.koala-ribbon) .koala-deal__tier {
-    padding-block: 5px !important;
-}
-.koala-deal__tiers__list>.koala-deal__tiers__list-item .koala-deal__tier__input:checked+.koala-deal__tier {
-    background: transparent !important;
-}
-.koala-deal__tier {
-    border-radius: 20px !important;
-} 
-.koala-deal__tier__image {
-    width: 65px !important;
-    height: 65px !important;
-    border-radius: 12px !important;
-}
-.koala-deal__tier .koala-deal__tier__content-container {
-    align-items: flex-start !important;
-}
-.koala-deal__tier__title {
-  color: #123F35 !important;
-    font-size: 19px !important;
-    line-height: 20px;
-}
-.koala-deal__tier__badge {
-    background: transparent !important;
-    font-size: 14px !important;
-    color: #868686 !important;
-    padding: 0 !important;
-}
-.koala-deal__tier__title-container {
-    flex-direction: column !important;
-}
-.koala-deal__tier__price {
-    order: 2;
-    color: var(--regular-price-color) !important;
-    text-decoration: line-through;
-}
-.koala-deal__tier__selling-price {
-    order: 1;
-    color: #123F35;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: normal;
-    text-decoration: none!important;
-}
-.koala-deal__tier__regular-price--hidden {
-    display: none !important;
-}
-koala-countdown.koala-countdown.koala-countdown-AK202VWtNSng2bGhLb__upsell_koala_bundles_deals_block_WRtRgJ {
-    display: none !important;
-}
-.koala-deal__tier__image {
-    position: relative;
-}
-span.qty-badge {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: #123F35;
-    color: #fff;
-    font-size: 10px;
-    font-weight: 500;
-    border-radius: 50%;
-    min-width: 22px;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(25%, 25%);
-}
-ul.sub_discount {
-    display: flex;
-    visibility: hidden;
-    margin: 0;
-}
-
-</style>
-
-<script>
+  <script>
     // PDP Subscription
 
-  var interval = setInterval(function () {
-    var $oneTime = $('.recurpay__widget_container[data-type="onetime-purchase"]');
-    var $subscription = $('.recurpay__widget_container[data-type="subscription-purchase"]');
+    var interval = setInterval(function () {
+      var $oneTime = $('.recurpay__widget_container[data-type="onetime-purchase"]');
+      var $subscription = $('.recurpay__widget_container[data-type="subscription-purchase"]');
 
-    // Check if the subscription container still has 'selected'
-    if ($subscription.hasClass('recurpay__widget_container--selected')) {
-      // Remove 'selected' from subscription
-      $subscription.removeClass('recurpay__widget_container--selected');
-      $subscription.find('input').prop('checked', false);
+      // Check if the subscription container still has 'selected'
+      if ($subscription.hasClass('recurpay__widget_container--selected')) {
+        // Remove 'selected' from subscription
+        $subscription.removeClass('recurpay__widget_container--selected');
+        $subscription.find('input').prop('checked', false);
 
-      // Add 'selected' to one-time
-      $oneTime.addClass('recurpay__widget_container--selected');
-      $oneTime.find('input').prop('checked', true).trigger('change');
+        // Add 'selected' to one-time
+        $oneTime.addClass('recurpay__widget_container--selected');
+        $oneTime.find('input').prop('checked', true).trigger('change');
 
-      // Stop interval once done
-      clearInterval(interval);
-    }
-  }, 100);
+        // Stop interval once done
+        clearInterval(interval);
+      }
+    }, 100);
 
-  // Target buttons inside buy-buttons
-  var $buttons = $('.buy-buttons .button, .buy-buttons .shopify-payment-button');
+    // Target buttons inside buy-buttons
+    var $buttons = $('.buy-buttons .button, .buy-buttons .shopify-payment-button');
 
-  // 1. Remove class on load
-  $buttons.removeClass('recurpay-hide');
+    // 1. Remove class on load
+    $buttons.removeClass('recurpay-hide');
 
-  // 2. Observe changes — stop Recurpay from adding it again
-  const observer = new MutationObserver(() => {
-    $('.buy-buttons .button, .buy-buttons .shopify-payment-button')
-      .removeClass('recurpay-hide');
-  });
+    // 2. Observe changes — stop Recurpay from adding it again
+    const observer = new MutationObserver(() => {
+      $('.buy-buttons .button, .buy-buttons .shopify-payment-button').removeClass('recurpay-hide');
+    });
 
-  observer.observe(document.body, {
-    attributes: true,
-    subtree: true,
-    attributeFilter: ['class']
-  });
+    observer.observe(document.body, {
+      attributes: true,
+      subtree: true,
+      attributeFilter: ['class'],
+    });
 
-  // Remove price from select option
-  setInterval(() => $('.recurpay-dropdown-price').remove(), 200);
+    // Remove price from select option
+    setInterval(() => $('.recurpay-dropdown-price').remove(), 200);
 
-  
+    // Koala bundle app qty badge
 
-// Koala bundle app qty badge
+    $('.koala-deal__tier__content-container').each(function () {
+      var titleText = $(this).find('.koala-deal__tier__title').text().trim();
+      var qty = parseInt(titleText); // extracts "2" from "2 Jars"
 
-  $('.koala-deal__tier__content-container').each(function () {
-    var titleText = $(this).find('.koala-deal__tier__title').text().trim();
-    var qty = parseInt(titleText); // extracts "2" from "2 Jars"
-    
-    if (!isNaN(qty)) {
-      var badge = $('<span class="qty-badge">x' + qty + '</span>');
-      $(this).find('.koala-deal__tier__image').append(badge);
-    }
-  });
+      if (!isNaN(qty)) {
+        var badge = $('<span class="qty-badge">x' + qty + '</span>');
+        $(this).find('.koala-deal__tier__image').append(badge);
+      }
+    });
+  </script>
 
-
+  <script>
 // GLOBAL FLAG
-
 let isSubscriptionSelected = false;
 
-
 // SAVE ORIGINAL BADGES & SUBTITLES ON PAGE LOAD
-
 let originalSubtitles = [];
 
 $(document).ready(function () {
-    $('.koala-deal__tiers__list-item').each(function () {
-        let badge = $(this).find(".koala-deal__tier__badge");
-        if (badge.length) {
-            $(this).attr("data-original-badge", badge.text().trim());
-        }
+  $('.koala-deal__tiers__list-item').each(function () {
+    let badge = $(this).find('.koala-deal__tier__badge');
+    if (badge.length) {
+      $(this).attr('data-original-badge', badge.text().trim());
+    }
 
-        let sub = $(this).find('.koala-deal__tier__subtitle').text().trim();
-        originalSubtitles.push(sub); // save original subtitle
-    });
+    let sub = $(this).find('.koala-deal__tier__subtitle').text().trim();
+    originalSubtitles.push(sub);
+  });
 });
 
-
 // UPDATE TIER SELLING PRICE (ONE-TIME MODE ONLY)
-
 function updateSellingPrice() {
-    if (isSubscriptionSelected) return;
+  if (isSubscriptionSelected) return;
 
-    $('.koala-deal__tiers__list-item').each(function () {
-        let priceText = $(this).find('.koala-deal__tier__price').text().trim();
-        let price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
-        let subtitle = $(this).find('.koala-deal__tier__subtitle').text().trim();
-        let match = subtitle.match(/(\d+)%/);
-        let discountPercent = match ? parseFloat(match[1]) : 0;
-        let finalPrice = (price - (price * discountPercent) / 100).toFixed(2);
+  $('.koala-deal__tiers__list-item').each(function () {
+    let priceText = $(this).find('.koala-deal__tier__price').text().trim();
+    let price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+    let subtitle = $(this).find('.koala-deal__tier__subtitle').text().trim();
+    let match = subtitle.match(/(\d+)%/);
+    let discountPercent = match ? parseFloat(match[1]) : 0;
 
-        $(this).find('.koala-deal__tier__selling-price').remove();
+    // Store discount in session storage
+    let subtitleParent = $(this).find('.koala-deal__tier__title').text().trim();
+    sessionStorage.setItem(subtitleParent, discountPercent);
 
-        $(this).find('.koala-deal__tier__pricing-container')
-            .append(`<div class="koala-deal__tier__selling-price">$${finalPrice}</div>`);
-    });
+    let finalPrice = (price - (price * discountPercent) / 100).toFixed(2);
+
+    $(this).find('.koala-deal__tier__selling-price').remove();
+
+    $(this)
+      .find('.koala-deal__tier__pricing-container')
+      .append(`<div class="koala-deal__tier__selling-price">$${finalPrice}</div>`);
+  });
 }
-
 
 // UPDATE ONE-TIME PRICE IN RECURPAY
-
 function updateOneTimePrices() {
-    if (isSubscriptionSelected) return;
+  const target = $('.recurpay__widget_container[data-type="onetime-purchase"] .recurpay__group_selling_price');
 
-    const target = $('.recurpay__widget_container[data-type="onetime-purchase"] .recurpay__group_selling_price');
+  let tier = $('.koala-deal__tier__input:checked').closest('.koala-deal__tiers__list-item');
+  if (!tier.length) tier = $('.koala-deal__tiers__list-item').first();
 
-    let tier = $(".koala-deal__tier__input:checked").closest(".koala-deal__tiers__list-item");
-    if (!tier.length) tier = $(".koala-deal__tiers__list-item").first();
+  const quantityText = tier.find('.koala-deal__tier__title').text().trim();
+  
+  // Get discount from session storage
+  let discountPercent = parseFloat(sessionStorage.getItem(quantityText) || '0');
+  
+  // Recalculate price using stored discount
+  const priceText = tier.find('.koala-deal__tier__price').text().trim();
+  const originalPrice = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+  const finalPrice = (originalPrice - (originalPrice * discountPercent) / 100).toFixed(2);
+  
+  const sellingText = `$${finalPrice}`;
+  const compareText = tier.find('.koala-deal__tier__price').text().trim();
+  const subtitle = tier.find('.koala-deal__tier__subtitle').text().trim();
 
-    const sellingText = tier.find(".koala-deal__tier__selling-price").text().trim();
-    const compareText = tier.find(".koala-deal__tier__price").text().trim();
-    const subtitle = tier.find(".koala-deal__tier__subtitle").text().trim();
+  const quantity = (quantityText.match(/\d+/) || ['0'])[0];
+  const variantTitle = $('input[name="id"]').attr('variant-title');
 
-    const quantityText = tier.find(".koala-deal__tier__title").text().trim();
-    const quantity = (quantityText.match(/\d+/) || ['0'])[0];
+  const selling = parseFloat(sellingText.replace(/[^0-9.-]+/g, ''));
+  const compare = parseFloat(compareText.replace(/[^0-9.-]+/g, ''));
 
-    const variantTitle = $('input[name="id"]').attr('variant-title');
+  // Update selling price
+  target.find('.money').text(sellingText);
 
-    if (!sellingText) return;
-
-    const selling = parseFloat(sellingText.replace(/[^0-9.-]+/g, ""));
-    const compare = parseFloat(compareText.replace(/[^0-9.-]+/g, ""));
-
-    // Update selling price
-    target.find(".money").text(sellingText);
-
-    // Compare price
-    const compareElem = target.find(".recurpay__group_compare_price");
-    if (compare > selling) {
-        if (compareElem.length) {
-            compareElem.find(".money").text(compareText);
-        } else {
-            target.append(`<div class="recurpay__group_compare_price"><span class="money">${compareText}</span></div>`);
-        }
+  // Compare price
+  const compareElem = target.find('.recurpay__group_compare_price');
+  if (compare > selling) {
+    if (compareElem.length) {
+      compareElem.find('.money').text(compareText);
     } else {
-        compareElem.remove();
+      target.append(`<div class="recurpay__group_compare_price"><span class="money">${compareText}</span></div>`);
     }
+  } else {
+    compareElem.remove();
+  }
 
-    // Subtitle
-    let subtitleElem = $('.recurpay__widget_container[data-type="onetime-purchase"]').find(".recurpay__group_subtitle");
-    if (subtitleElem.length) {
-        subtitleElem.text(subtitle);
-    } else {
-        $('.recurpay__widget_container[data-type="onetime-purchase"] .recurpay__group_title')
-            .append(`<div class="recurpay__group_subtitle">${subtitle}</div>`);
-    }
+  // Subtitle
+  let subtitleElem = $('.recurpay__widget_container[data-type="onetime-purchase"]').find('.recurpay__group_subtitle');
+  if (subtitleElem.length) {
+    let currentText = subtitleElem.text().trim();
 
-    // Update quantity on BOTH modes
-    ["onetime-purchase", "subscription-purchase"].forEach(type => {
-        let container = $(`.recurpay__widget_container[data-type="${type}"]`);
-        
-        // Remove any existing quantity element first
-        container.find(".selected_quantity").remove();
+// Replace any percentage number in the text with the sessionStorage value
+let updatedText = currentText.replace(/(\d+)%/, `${discountPercent}%`);
+subtitleElem.text(updatedText);
+  } else {
+    $('.recurpay__widget_container[data-type="onetime-purchase"] .recurpay__group_title').append(
+      `<div class="recurpay__group_subtitle">${subtitle}</div>`
+    );
+  }
 
-        const qtyHtml = `${quantity}× ${variantTitle || ''} jars`.trim();
-        
-        // Append quantity directly inside .recurpay__group_title
-        container.find(".recurpay__group_title").append(`<div class="selected_quantity">${qtyHtml}</div>`);
-    });
-
+  // Update quantity on BOTH modes
+  ['onetime-purchase', 'subscription-purchase'].forEach((type) => {
+    let container = $(`.recurpay__widget_container[data-type="${type}"]`);
+    container.find('.selected_quantity').remove();
+    const qtyHtml = `${quantity}× ${variantTitle || ''}`.trim();
+    container.find('.recurpay__group_title').append(`<div class="selected_quantity">${qtyHtml}</div>`);
+  });
 }
 
-
-// UPDATE SUBSCRIPTION PRICE 
-
+// UPDATE SUBSCRIPTION PRICE
 function updateSubscriptionPrices() {
-    const container = $('.recurpay__widget_container[data-type="subscription-purchase"]');
-    if (!container.length) return;
+  const container = $('.recurpay__widget_container[data-type="subscription-purchase"]');
+  if (!container.length) return;
 
-    // Get all percents from sub_discount
-    let percents = [];
-    $('.sub_discount li .percent').each(function () {
-        percents.push($(this).text().trim());
-    });
+  let percents = [];
+  $('.sub_discount li .percent').each(function () {
+    percents.push($(this).text().trim());
+  });
 
-    // Update selling prices
-    $('.koala-deal__tiers__list-item').each(function (i) {
-        let price = parseFloat($(this).find('.koala-deal__tier__price').text().replace(/[^0-9.]/g,''));
-        let percent = parseFloat((percents[i] || '0%').replace('%',''));
-        let finalPrice = (price - (price * percent) / 100).toFixed(2);
+  $('.koala-deal__tiers__list-item').each(function (i) {
+    let price = parseFloat(
+      $(this)
+        .find('.koala-deal__tier__price')
+        .text()
+        .replace(/[^0-9.]/g, '')
+    );
+    let percent = parseFloat((percents[i] || '0%').replace('%', ''));
+    let finalPrice = (price - (price * percent) / 100).toFixed(2);
 
-        let sellingElem = $(this).find('.koala-deal__tier__selling-price');
-        if (!sellingElem.length) {
-            $(this).find('.koala-deal__tier__pricing-container')
-                .append(`<div class="koala-deal__tier__selling-price">$${finalPrice}</div>`);
-        } else {
-            sellingElem.text(`$${finalPrice}`);
-        }
-    });
-
-    // Get selected tier or first
-    let checkedTier = $(".koala-deal__tier__input:checked").closest(".koala-deal__tiers__list-item");
-    if (!checkedTier.length) checkedTier = $(".koala-deal__tiers__list-item").first();
-
-    // Selling price
-    let sellingText = checkedTier.find('.koala-deal__tier__selling-price').text().trim();
-    container.find('.recurpay__group_selling_price .money').text(sellingText);
-
-    // Compare price
-    let compareText = checkedTier.find('.koala-deal__tier__price').text().trim();
-    let selling = parseFloat(sellingText.replace(/[^0-9.-]+/g,''));
-    let compare = parseFloat(compareText.replace(/[^0-9.-]+/g,''));
-
-    container.find('.recurpay__group_compare_price').remove();
-
-    if (compare > selling) {
-        container.find('.recurpay__group_selling_price').parent().append(`
-            <div class="recurpay__group_compare_price">
-                <span class="money">${compareText}</span>
-            </div>
-        `);
+    let sellingElem = $(this).find('.koala-deal__tier__selling-price');
+    if (!sellingElem.length) {
+      $(this)
+        .find('.koala-deal__tier__pricing-container')
+        .append(`<div class="koala-deal__tier__selling-price">$${finalPrice}</div>`);
+    } else {
+      sellingElem.text(`$${finalPrice}`);
     }
+  });
 
-    // Subtitle for subscription
-    let tierIndex = $('.koala-deal__tiers__list-item').index(checkedTier);
-    let selectedPercent = percents[tierIndex] || '0%';
-    let subtitleText = `You save ${selectedPercent}`;
-    let subtitleElem = container.find('.recurpay__group_subtitle');
-    if (subtitleElem.length) subtitleElem.text(subtitleText);
-    else container.find('.recurpay__group_title')
-        .append(`<div class="recurpay__group_subtitle">${subtitleText}</div>`);
+  let checkedTier = $('.koala-deal__tier__input:checked').closest('.koala-deal__tiers__list-item');
+  if (!checkedTier.length) checkedTier = $('.koala-deal__tiers__list-item').first();
 
-    // Quantity
-    let quantity = (checkedTier.find(".koala-deal__tier__title").text().match(/\d+/) || ['0'])[0];
-    let variantTitle = $('input[name="id"]').attr('variant-title') || '';
-    let qtyHtml = `${quantity}× ${variantTitle} jars`.trim();
-    let qtyElem = container.find('.selected_quantity');
-    if (qtyElem.length) qtyElem.text(qtyHtml);
-    else container.find('.recurpay__group_subtitle').prepend(`<div class="selected_quantity">${qtyHtml}</div>`);
+  let sellingText = checkedTier.find('.koala-deal__tier__selling-price').text().trim();
+  container.find('.recurpay__group_selling_price .money').text(sellingText);
+
+  let compareText = checkedTier.find('.koala-deal__tier__price').text().trim();
+  let selling = parseFloat(sellingText.replace(/[^0-9.-]+/g, ''));
+  let compare = parseFloat(compareText.replace(/[^0-9.-]+/g, ''));
+
+  container.find('.recurpay__group_compare_price').remove();
+
+  if (compare > selling) {
+    container.find('.recurpay__group_selling_price').parent().append(`
+      <div class="recurpay__group_compare_price">
+        <span class="money">${compareText}</span>
+      </div>
+    `);
+  }
+
+  let tierIndex = $('.koala-deal__tiers__list-item').index(checkedTier);
+  let selectedPercent = percents[tierIndex] || '0%';
+  let subtitleText = `You save ${selectedPercent}`;
+  let subtitleElem = container.find('.recurpay__group_subtitle');
+  if (subtitleElem.length) subtitleElem.text(subtitleText);
+  else
+    container.find('.recurpay__group_title').append(`<div class="recurpay__group_subtitle">${subtitleText}</div>`);
+
+  let quantity = (checkedTier.find('.koala-deal__tier__title').text().match(/\d+/) || ['0'])[0];
+  let variantTitle = $('input[name="id"]').attr('variant-title') || '';
+  let qtyHtml = `${quantity}× ${variantTitle}`.trim();
+  let qtyElem = container.find('.selected_quantity');
+  if (qtyElem.length) qtyElem.text(qtyHtml);
+  else container.find('.recurpay__group_subtitle').prepend(`<div class="selected_quantity">${qtyHtml}</div>`);
 }
-
 
 // PER-JAR PRICE HANDLING
-
-// subscription → per-jar price
 function updatePerItemPrice_subscriptionMode() {
-    $('.koala-deal__tiers__list-item').each(function () {
-        let sellingText = $(this).find('.koala-deal__tier__selling-price').text().trim();
-        if (!sellingText) return;
+  $('.koala-deal__tiers__list-item').each(function () {
+    let sellingText = $(this).find('.koala-deal__tier__selling-price').text().trim();
+    if (!sellingText) return;
 
-        let total = parseFloat(sellingText.replace(/[^0-9.-]+/g, ''));
-        let qtyText = $(this).find(".koala-deal__tier__title").text().trim();
-        let qty = parseInt((qtyText.match(/\d+/) || ['1'])[0]);
+    let total = parseFloat(sellingText.replace(/[^0-9.-]+/g, ''));
+    let qtyText = $(this).find('.koala-deal__tier__title').text().trim();
+    let qty = parseInt((qtyText.match(/\d+/) || ['1'])[0]);
 
-        let perJar = (total / qty).toFixed(2);
-        $(this).find(".koala-deal__tier__badge").text(`$${perJar} per jar`);
-    });
+    let perJar = (total / qty).toFixed(2);
+    $(this).find('.koala-deal__tier__badge').text(`$${perJar} / jar`);
+  });
 }
 
-// If discount is 0%
-
+// TOGGLE SUBTITLE VISIBILITY
 function toggleSubtitleVisibility() {
-    // For koala deal tier subtitles
-    $('.koala-deal__tiers__list-item').each(function () {
-        let subtitle = $(this).find('.koala-deal__tier__subtitle');
-        let priceElem = $(this).find('.koala-deal__tier__price');
+  $('.koala-deal__tiers__list-item').each(function () {
+    let subtitle = $(this).find('.koala-deal__tier__subtitle');
+    let priceElem = $(this).find('.koala-deal__tier__price');
 
-        if (!subtitle.length || !priceElem.length) return;
+    if (!subtitle.length || !priceElem.length) return;
 
-        let text = subtitle.text().trim();
-        if (text.includes('0%') || text === '') {
-            subtitle.hide();
-            priceElem.hide(); // hide only the price of this tier
-        } else {
-            subtitle.show();
-            priceElem.show(); // show price if subtitle is not 0%
-        }
-    });
+    let text = subtitle.text().trim();
+    if (text.includes('0%') || text === '') {
+      subtitle.hide();
+      priceElem.hide();
+    } else {
+      subtitle.show();
+      priceElem.show();
+    }
+  });
 
-    // For recurpay subtitles
-    $('.recurpay__widget_container .recurpay__group_subtitle').each(function () {
-        let text = $(this).text().trim();
-        if (text.includes('0%') || text === '') {
-            $(this).hide();
-        } else {
-            $(this).show();
-        }
-    });
+  $('.recurpay__widget_container .recurpay__group_subtitle').each(function () {
+    let text = $(this).text().trim();
+    if (text.includes('0%') || text === '') {
+      $(this).hide();
+    } else {
+      $(this).show();
+    }
+  });
 }
 
-
-// one-time → reset original badges
+// RESET BADGES
 function resetBadges_original() {
-    $('.koala-deal__tiers__list-item').each(function () {
-        let original = $(this).attr("data-original-badge");
-        if (original) {
-            $(this).find(".koala-deal__tier__badge").text(original);
-        }
-    });
+  $('.koala-deal__tiers__list-item').each(function () {
+    let original = $(this).attr('data-original-badge');
+    if (original) {
+      $(this).find('.koala-deal__tier__badge').text(original);
+    }
+  });
 }
 
-// one-time → restore subtitles
+// RESTORE ONE-TIME SUBTITLES
 function restoreOneTimeSubtitles() {
-    $('.koala-deal__tiers__list-item').each(function (i) {
-        $(this).find('.koala-deal__tier__subtitle').text(originalSubtitles[i]);
-        toggleSubtitleVisibility();
-    });
+  $('.koala-deal__tiers__list-item').each(function (i) {
+    $(this).find('.koala-deal__tier__subtitle').text(originalSubtitles[i]);
+  });
+  toggleSubtitleVisibility();
 }
 
+// APPLY SUBSCRIPTION SUBTITLES
+function applySubscriptionSubtitles() {
+  let subs = [];
+  $('.sub_discount li .percent').each(function () {
+    subs.push($(this).text().trim());
+  });
+
+  $('.koala-deal__tiers__list-item').each(function (i) {
+    let newSub = subs[i] ? `You save ${subs[i]}` : originalSubtitles[i];
+    $(this).find('.koala-deal__tier__subtitle').text(newSub);
+  });
+  toggleSubtitleVisibility();
+}
 
 // EVENT LISTENERS
 
-// subscription click
-$(document).on('click change', '.recurpay__widget_container[data-type="subscription-purchase"] input', function(){
-    isSubscriptionSelected = true;
-    applySubscriptionSubtitles();
-    updateSubscriptionPrices();
-    updatePerItemPrice_subscriptionMode();
+// Subscription click
+$(document).on('click change', '.recurpay__widget_container[data-type="subscription-purchase"] input', function () {
+  isSubscriptionSelected = true;
+  applySubscriptionSubtitles();
+  updateSubscriptionPrices();
+  updatePerItemPrice_subscriptionMode();
 });
 
-// one-time click
-$(document).on('click change', '.recurpay__widget_container[data-type="onetime-purchase"] input', function(){
-    isSubscriptionSelected = false;
+// One-time click - FIX APPLIED HERE
+$(document).on('click change', '.recurpay__widget_container[data-type="onetime-purchase"] input', function () {
+  isSubscriptionSelected = false;
+  restoreOneTimeSubtitles();
+  resetBadges_original();
+  
+  // Force recalculation of selling prices using session storage
+  updateSellingPrice();
+  updateOneTimePrices();
+});
+
+// Bundle changes - MAIN FIX HERE
+$(document).on('click change', '.koala-deal__tier__input', function () {
+  console.log('click triggered on input');
+  let subtitleTextEle = $(this).parent().find('.koala-deal__tier__subtitle').text().trim();
+  console.log('checking subtitle ele', subtitleTextEle);
+  
+  // First ensure subtitles are set correctly based on mode
+  if (!isSubscriptionSelected) {
     restoreOneTimeSubtitles();
+  }
+  
+  updateSellingPrice();
+  updateOneTimePrices();
+  updateSubscriptionPrices();
+  toggleSubtitleVisibility();
+
+  if (isSubscriptionSelected) {
+    updatePerItemPrice_subscriptionMode();
+  } else {
     resetBadges_original();
+  }
 });
 
-// bundle changes
-$(document).on('click change', '.koala-deal__tier__input', function() {
-    updateSellingPrice();
-    updateOneTimePrices();
-    updateSubscriptionPrices();
-    toggleSubtitleVisibility();
-
-    if (isSubscriptionSelected) updatePerItemPrice_subscriptionMode();
-    else {
-        resetBadges_original();
-        restoreOneTimeSubtitles();
-    }
-});
-
-// Subscription frequency changes
-
-$(document).ready(function() {
-
+// Block Recurpay frequency changes
+$(document).ready(function () {
   function blockRecurpayFrequencyChange() {
     var $sel = $('.recurpay__frequency_select');
-
     if (!$sel.length) return;
 
-    // Remove ALL change handlers added by Recurpay
     $sel.off('change');
-
-    // Our handler that does nothing
-    $sel.on('change', function(e) {
+    $sel.on('change', function (e) {
       e.preventDefault();
       e.stopImmediatePropagation();
       return false;
     });
   }
 
-  // Run once on load
   blockRecurpayFrequencyChange();
-
-  // Run repeatedly because Recurpay keeps re-initing / replacing the select
   setInterval(blockRecurpayFrequencyChange, 500);
 });
 
-
-
-// SUBTITLE SWITCHER FUNCTIONS
-
-function applySubscriptionSubtitles() {
-    let subs = [];
-    $('.sub_discount li .percent').each(function () {
-        subs.push($(this).text().trim());
-    });
-
-    $('.koala-deal__tiers__list-item').each(function (i) {
-        let newSub = subs[i] ? `You save ${subs[i]}` : originalSubtitles[i];
-        $(this).find('.koala-deal__tier__subtitle').text(newSub);
-    });
-    toggleSubtitleVisibility();
-}
-
-
 // PAGE LOAD INIT
-
-$(document).ready(function() {
-    const subscriptionContainer = $('.recurpay__widget_container[data-type="subscription-purchase"]');
-    if (subscriptionContainer.length && subscriptionContainer.find('input:checked').length) {
-        isSubscriptionSelected = true;
-        applySubscriptionSubtitles();
-        updateSubscriptionPrices();
-        updatePerItemPrice_subscriptionMode();
-    } else {
-        updateSellingPrice();
-        updateOneTimePrices();
-        resetBadges_original(); // keep original badges
-        restoreOneTimeSubtitles(); // keep original subtitles
-    }
+$(document).ready(function () {
+  const subscriptionContainer = $('.recurpay__widget_container[data-type="subscription-purchase"]');
+  if (subscriptionContainer.length && subscriptionContainer.find('input:checked').length) {
+    isSubscriptionSelected = true;
+    applySubscriptionSubtitles();
+    updateSubscriptionPrices();
+    updatePerItemPrice_subscriptionMode();
+  } else {
+    updateSellingPrice();
+    updateOneTimePrices();
+    resetBadges_original();
+    restoreOneTimeSubtitles();
+  }
 });
-
 
 // INTERVALS
-
-setInterval(function(){
-    if (!isSubscriptionSelected) updateSellingPrice();
+setInterval(function () {
+  if (!isSubscriptionSelected) updateSellingPrice();
 }, 500);
 
-setInterval(function(){
-    if (!isSubscriptionSelected) updateOneTimePrices();
+setInterval(function () {
+  if (!isSubscriptionSelected) updateOneTimePrices();
 }, 500);
-
-
 
 // Update subscription price on load
-
 $(window).on('load', function () {
-    setTimeout(function () {
-        let selected = $('.koala-deal__tier__input:checked');
-        if (!selected.length) {
-            selected = $('.koala-deal__tier__input').first();
-            selected.prop('checked', true);
-        }
-
-        selected.trigger('click').trigger('change');
-    }, 300); // small delay ensures Recurpay finished
+  setTimeout(function () {
+    let selected = $('.koala-deal__tier__input:checked');
+    if (!selected.length) {
+      selected = $('.koala-deal__tier__input').first();
+      selected.prop('checked', true);
+    }
+    console.log("debug 1");
+    selected.trigger('click').trigger('change');
+  }, 300);
 });
-</script>
-
+  </script>
 {% endif %}
